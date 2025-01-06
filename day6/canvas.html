@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+   <canvas  id="canvas" width="300px" height="300px" style="border:1px solid black"></canvas>
+   <!-- canvas tag is used to create space/whiteboard to draw shapes -->
+
+    <script>
+      var canvas = document.getElementById("canvas")
+      var ctx = canvas.getContext("2d")
+
+      ctx.strokeStyle="blue"
+      ctx.strokeRect(100,100,40,40);
+
+    </script>
+</body>
+</html>

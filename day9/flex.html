@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .flex{
+            display: flex; /*declare the div as flexible */
+            justify-content: space-between; /*distribut even space between the content */
+            background-color: lightyellow;
+            padding: 20px;
+            flex-direction: row-reverse;
+            
+           
+        }
+
+        .item{
+            background-color: lightcoral;
+            padding: 20px;
+            margin: 10px;
+            text-align: center;
+            flex: 1;   /*takes all item equal space */
+
+        }
+    </style>
+</head>
+<body>
+    <div class="flex">
+        <div class="item">CAKES</div>
+        <div class="item">COOKIES</div>
+        <div class="item">PASTRIES</div>
+        
+    </div>
+    
+</body>
+</html>

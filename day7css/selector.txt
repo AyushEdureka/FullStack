@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" >
+    <!-- rel=relaion- stylesheet[css] -->
+</head>
+<body>
+    <h1>External Css</h1>
+    <p>This is using external css /external file</p>
+</body>
+</html>
+
+style.css file created
+
+h1{
+color: rgb(50, 99, 0);
+text-align: right;
+}
+
+p{
+color: rgb(199, 117, 18);
+font-family: cursive;
+}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            color: rgb(152, 25, 0);
+        }
+        div{
+            color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <h1>Elemnet sec-tag name</h1>
+    <div>
+        This is example of element selector 
+    </div>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #Brain{
+            color: coral;
+        }
+
+        #p3{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="Brain">ID selector-use #idname</h1>
+    <p id="p3">This is parapragp 1</p>
+    <p>This is parapragp2</p>
+    <p>This is parapragp3</p>
+    <h1>This is heading without id</h1>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .fullstack{
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <p class="fullstack">Hii im a class selector use ".[dot]" classname</p>
+    <p class="fullstack">Can have same class name for other tag</p>
+    <p>This is pargaph3</p>
+    <h1 class="fullstack">Heading should be in yellow background</h1>
+</body>
+</html>

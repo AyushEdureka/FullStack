@@ -1,0 +1,21 @@
+//define variable
+
+$primary:red;
+$secondary: blue;
+
+//css style adding 
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: lightcoral;
+
+
+h1{
+    color: $primary;
+    text-align: center;
+}
+
+p{
+    color: $secondary;
+}
+
+}

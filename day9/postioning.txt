@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 1. static(deafult) placed one after other -->
+    <!-- <div>first 1</div>
+    <div>second 2</div>
+    <h1>third</h1> -->
+
+    <!-- <div style="position: static; background-color: lightblue;">I am Static</div>
+    <div style="background-color: lightcoral;">I am also Static</div> -->
+
+    
+    <!-- 2. Relative- move the element Top,Bottom,left or right -->
+
+    <!-- <div style="position: relative; top:20px; left : 50px; background-color: lightcyan;">
+        I am moved down 20px and left 30px  but still occupy my space
+    </div> -->
+
+
+    <!--  3 . Abosulte -->
+
+    <!-- <div style="position: relative; background-color: lightgray; height: 100px;">
+        Parent- element(realtive)
+        <div style="position: absolute; top: 40px; left: 90px; background-color: brown;">
+            I am abosulte (relative to parent)
+        </div>
+
+        <div style="position: absolute; top: 5px ;right :40px; background-color: rgb(224, 24, 24);">
+            I am abosulte (relative to parent)
+        </div>
+
+        <div style="position: absolute; bottom: 20px; background-color: rgb(5, 5, 5);">
+            I am abosulte (relative to parent)
+        </div>
+    </div> -->
+
+
+    <!-- 4. Fixed- it will fix the postion of element even if you scrolled -->
+
+    <!-- <div style="position: fixed; top: 0; left:0; background-color: blue; width: 100%;">
+        I am fixed at the top of the screen!
+    </div>
+
+    <div style="height: 1500px;">scroll down to see effect</div> -->
+
+
+    <!-- 5. sticky- combination of relative and fixed ,it acts like 
+    relative until it reached to specific point - sticky -->
+
+    <div>hii</div>
+
+    <div style="position: sticky; top: 0;  background-color: blue; width: 100%; padding: 10px;">
+        I stick to the top when you scroll past me!
+    </div>
+
+    <div style="height: 1500px; background-color: rgb(115, 108, 122);">scroll down to see effect</div>
+    
+
+
+</body>
+</html>

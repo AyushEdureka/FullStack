@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+             font-family: Arial, Helvetica, sans-serif;
+             text-align: center;
+             color: brown;
+        }
+
+        p{
+                font-size: 40px;
+                font-style: italic;
+                font-weight: bold;
+                color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hello guys Topic Font Styling</h1>
+    <p>This is a class for font styling using all ffont </p>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            position: absolute;
+            left: 0px;
+            top:0px;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hello learners</h1>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrTPjHOG0LBJKLlx35kYcK4hpx5xRdGNQ4tQ&s">
+    <p>Beacause zindex img has value -1 ,it will be placed behinnd
+        the text
+    </p>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .grid{
+            display: grid; /*declare the container as gride */;
+            grid-template-columns: repeat(2 , 1fr); /*create 2 equal columns 2-no of column 1fr -size of both */;
+            grid-gap: 10px;  /*space betwwn grid item */
+            background-color: lightblue;
+            padding: 20px; /*space inside the contaiiner */
+        }
+
+        .item{
+            background-color: lightgreen;
+            padding: 20px;
+            text-align: center;
+            border: 1px solid blue;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid">
+        <div class="item">Cake Ingredient</div>
+        <div class="item">Cake Price</div>
+        <div class="item">Cookies Ingredient</div>
+        <div class="item">Cookies Price</div>
+        <div class="item">Pastery Ingredient</div>
+        <div class="item">Pastery Price</div>
+    </div>
+</body>
+</html>

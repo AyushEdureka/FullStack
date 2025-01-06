@@ -1,0 +1,14 @@
+body {
+  background-color: coral;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+body h1 {
+  font-size: 2rem;
+  text-align: center;
+}
+body p {
+  font-size: 1.5 rem;
+}/*# sourceMappingURL=index.css.map */

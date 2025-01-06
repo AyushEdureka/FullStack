@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <div class="banner">
+        <h1>Welcome To Bakery</h1>
+    </div>
+
+    
+</body>
+</html>
+
+index.css
+
+body{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.banner{
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-shadow: 2px 2px 4px black;
+
+    background-color: bisque;
+    background-image: url('./download.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    
+
+}
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            font-style: italic;
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="h1">heading1</h1>
+    <p id="p1">This is paragapgh</p>
+    <div>
+        <p>This is normal parapagh</p>
+    </div>
+    <div class="h1">This is one another div</div>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div,p,h2{
+            color:brown
+        }
+    </style>
+</head>
+<body>
+    <h1>Hedain1</h1>
+    <div>this is div </div>
+    <p> this is paragparh</p>
+    <h2>heading 2</h2>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a:hover{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <a href="#">HOVER oVER THIS LINK TO TURN RED</a>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image with Overlay</title>
+    <style>
+        /* This is the container holding the image and the overlay */
+        .container {
+            position: relative; /* Ensures elements inside can be positioned relative to this container */
+            width: 50%; /* The container takes up 50% of the page width */
+        }
+
+        /* Styling the image */
+        .image {
+            display: block; /* Ensures it behaves like a block (no extra spaces) */
+            width: 100%; /* The image stretches to fill the container width */
+            height: auto; /* Keeps the aspect ratio of the image */
+        }
+
+        /* The overlay that appears on top of the image */
+        .overlay {
+            position: absolute; /* Positions it over the image inside the container */
+            top: 0; bottom: 0; /* Stretches the overlay from top to bottom */
+            left: 0; right: 0; /* Stretches the overlay from left to right */
+            width: 100%; /* Matches the width of the container */
+            height: 100%; /* Matches the height of the container */
+            opacity: 0; /* Starts invisible */
+            transition: 0.5s ease; /* Smoothly fades in */
+            background-color: #008CBA; /* Light blue overlay color */
+        }
+
+        /* When the mouse is over the container, make the overlay visible */
+        .container:hover .overlay {
+            opacity: 1; /* Makes the overlay fully visible */
+        }
+
+        /* The text inside the overlay */
+        .text {
+            color: white; /* White text color */
+            font-size: 20px; /* Text size */
+            position: absolute; /* Allows positioning within the overlay */
+            top: 50%; left: 50%; /* Centering text horizontally and vertically */
+            transform: translate(-50%, -50%); /* Adjusts for perfect centering */
+        }
+    </style>
+</head>
+<body>
+    <!-- Title of the page -->
+    <h1>Hover Over the Image</h1>
+
+    <!-- Image and overlay section -->
+    <div class="container">
+        <!-- The main image -->
+        <img src="./avator.jpg" alt="Image description" class="image">
+        
+        <!-- The overlay that appears when hovering -->
+        <div class="overlay">
+            <!-- Text shown in the overlay -->
+            <div class="text">Hello!</div>
+        </div>
+    </div>
+</body>
+</html>

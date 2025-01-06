@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Netflix</h1>
+
+    <img src="data:image/jpeg;base64,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" alt="Sorrry couldnt load"  height="70px" width="100px">
+
+  <div style="background-color: red;" style="font-style: italic;" title="this is div">
+    <p>WELCOME TO ENTERMAINENT</p><br>
+    <p style="font-family: monospace;">Watch Anywhere ,AnyTime</p>
+  </div>
+
+  <span style="background-color: blue;">
+    Login
+  </span><br><br>
+
+  <select>
+    <option selected >Watchlist</option>
+    <option>Series</option>
+    <option>Adventure</option>
+    <option>Thriller</option>
+  </select>
+
+  <h4>Feedback</h4>
+  <form>
+Name:<input type="text" placeholder="Enter your name" required><br>
+Password:<input type="password" placeholder="Enter password" required><br>
+
+Feedback:<textarea rows="4" cols="15"></textarea><br>
+
+<button type="button" value="Submit">SUBMIT</button>
+  </form>
+
+<ol>
+    <li>Career</li>
+    <li>CONTACT US</li>
+    <li>Feedback</li>
+</ol>
+
+<dl style="text-align: center;">
+    <dt>Netflix</dt>
+    <dd>It is an Online OTT platform,Rated number one</dd>
+</dl>
+
+
+</body>
+</html>
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<table border="1px" style="background-color: bisque;" cellspacing="10px" cellpadding="10px">
+<tr>
+    <th>Content</th>
+    <th>Movies</th>
+    <th>series</th>
+    <th>Anime</th>
+    <th>Kids</th>
+ </tr>
+
+ <tr>
+    <td>Ratings</td>
+    <td>***</td>
+    <td>****</td>
+    <td>*****</td>
+    <td>**</td>
+</tr>
+
+<tr>
+    <td>1</td>
+    <td>2</td>
+    <td>3</td>
+    <td>4</td>
+    <td>5</td>
+</tr>
+
+
+</table>
+
+
+</body>
+</html>
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- orderred list-we will write in the form order  -->
+    <ol type="I">
+      <li>Career</li>
+      <li>Contact us</li>
+      <li>Support</li>
+      <li>Blogs</li>
+    </ol>
+
+<!-- Unordered list -->
+    <ul type="square">
+        <li>Career</li>
+        <li>Contact us</li>
+        <li>Support</li>
+        <li>Blogs</li> 
+    </ul>
+
+
+<!-- Definition list -->
+ <dl style="text-align: center;">
+    <dt>Netflix</dt>
+    <dd>It is an online OTT platform.Watch Anyhwhere Anytime</dd>
+
+    <!-- <dt>heading dt tag</dt>
+    <dd>definfition data section wheere we write data of heading</dd> -->
+ </dl>
+
+
+ <!-- Anchor tag-it used to link one webpage to another webpage -->
+  <a href="https://www.amazon.com/">home</a>
+</body>
+</html>
+
+

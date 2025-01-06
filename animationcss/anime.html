@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            border-radius: 3px;
+            text-align: center;
+            animation-name: first;
+            animation-duration: 10s;
+        }
+
+        /* //@keyframe it is used to give animation */ 
+
+
+        /* example 1st */
+        /* @keyframes first{
+            from {background-color: red;}
+
+            to {background-color: blue;}
+        } */
+
+
+        /* example second- more than 1 color */
+
+        @keyframes first{
+            0% {background-color: red;}
+            25% {background-color: yellow;}
+            50% {background-color: blue;}
+            100% {background-color: brown;}
+        }
+
+    </style>
+</head>
+<body>
+    <h1>CSS ANIMATION</h1>
+    
+    <div>HI</div>
+
+     <p>When animation will be done it comes back to orginal style</p>
+</body>
+</html>

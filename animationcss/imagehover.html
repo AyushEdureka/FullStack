@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<style>
+    /* this is conatiner holding the image and the overlay */
+.container {
+    position: relative;
+    width: 50%;
+}
+
+/* style the image */
+.image{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* the overlay[over another layer] that appears on top of image */
+.overlay{
+    position: absolute;
+    top: 0; bottom: 0;
+    left: 0; right: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: 0.5 ease;   
+    background-color: #008CBA;  
+
+}
+
+/* when you move mouse inside div - curtain(overlay will ocuur opacticy makes background transparent) */
+.container:hover .overlay{
+    opacity: 1;
+} 
+
+
+
+/* the text on curtain */
+.text{
+    color: white;
+    font-size: 30px;
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%,-50%);  /* adjust the text for perfect center */
+}
+</style>
+
+</head>
+<body>
+    
+
+    <h1>HOVER OVER IMAGE</h1>
+    <div class="container">
+
+        <img src="./avator.jpg" class="image">
+
+
+        <div  class="overlay">
+            <div class="text">MERRY CHRISTMAS</div>
+        </div>
+
+    </div>
+</body>
+</html>

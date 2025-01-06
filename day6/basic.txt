@@ -1,0 +1,53 @@
+<body>
+    <!-- 1.AUDIO  -->
+     <!-- AUDIO - MP3 -->
+     <audio controls>
+        <source src="./file_example_MP3_700KB.mp3" type="audio/mpeg">
+     </audio>
+
+
+     <!-- 2.VIDEO -->
+      <!-- format - mp4 -->
+
+      <video controls height="200" width="300">
+        <source src="./file_example_MP4_640_3MG.mp4" type="video/mp4">
+      </video>
+
+     
+</body>
+
+
+
+<body>
+    <header>
+        <h1>My website</h1>
+       <nav>
+        <a href="#xyz">Today's deal</a>
+        <a href="#pqr">Cosutimer service</a>
+        <a href="https://www.amazon.com/ref=nav_logo">sell</a>
+       </nav>
+    </header>
+</body>
+
+
+
+body>
+    <footer>
+        <p>POSTED BY: MK</p>
+        <p>Contact Information:<a href="mailto:xyz@gmail.com">xyz@gmail.com</a></p>
+    </footer>
+</body>
+
+
+<body>
+    <section>
+        <h2>About us</h2>
+        <p>we are a startup in xyz industry</p>
+    </section>
+</body>
+
+
+<article>
+        <h2>Blog post Title</h2>
+        <p>This is article just like a newpapwer</p>
+    </article>

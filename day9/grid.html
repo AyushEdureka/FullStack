@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .grid{
+            display: grid; /*declare the container as gride */;
+            grid-template-columns: repeat(2 , 1fr); /*create 2 equal columns 2-no of column 1fr -size of both */;
+            grid-gap: 10px;  /*space betwwn grid item */
+            background-color: lightblue;
+            padding: 20px; /*space inside the contaiiner */
+        }
+
+        .item{
+            background-color: lightgreen;
+            padding: 20px;
+            text-align: center;
+            border: 1px solid blue;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid">
+        <div class="item">Cake Ingredient</div>
+        <div class="item">Cake Price</div>
+        <div class="item">Cookies Ingredient</div>
+        <div class="item">Cookies Price</div>
+        <div class="item">Pastery Ingredient</div>
+        <div class="item">Pastery Price</div>
+    </div>
+</body>
+</html>

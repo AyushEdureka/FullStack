@@ -1,0 +1,23 @@
+//define the variable
+//$ is sign for variable
+
+$background-color: coral;
+$text-color:white;
+
+body{
+    background-color: $background-color;
+    color: $text-color;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 20px;
+
+    h1{
+       font-size: 2rem;
+       text-align: center;
+    }
+
+    p{
+        font-size: 1.5 rem;
+    }
+}
+

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Christmas Wonderland</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to bottom, #1e3c72, #2a5298);
+            color: white;
+            overflow-x: hidden;
+        }
+
+        header {
+            background: #ff3e3e;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        header h1 {
+            font-size: 3rem;
+            font-family: 'Garamond', serif;
+            margin: 0;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .snowflakes {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            overflow: hidden;
+        }
+
+        .snowflake {
+            position: absolute;
+            top: -10px;
+            background: white;
+            border-radius: 50%;
+            opacity: 0.8;
+            animation: fall 10s linear infinite;
+        }
+
+        @keyframes fall {
+            from {
+                transform: translateY(-10px);
+            }
+            to {
+                transform: translateY(110vh);
+            }
+        }
+
+        .tree {
+            position: relative;
+            margin: 40px auto;
+            width: 0;
+            height: 0;
+            border-left: 150px solid transparent;
+            border-right: 150px solid transparent;
+            border-bottom: 250px solid green;
+            animation: bounce 3s infinite ease-in-out;
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        .tree::after {
+            content: '';
+            position: absolute;
+            bottom: -40px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 40px;
+            background: brown;
+        }
+
+        .lights {
+            position: absolute;
+            top: 10px;
+            left: -20px;
+            animation: twinkle 1.5s infinite;
+        }
+
+        .lights span {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            background: red;
+            border-radius: 50%;
+            margin: 5px;
+        }
+
+        .lights span:nth-child(2) {
+            background: yellow;
+        }
+
+        .lights span:nth-child(3) {
+            background: blue;
+        }
+
+        .greeting {
+            margin-top: 20px;
+            font-size: 1.5rem;
+            color: #ffcc00;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        footer {
+            background: #333;
+            padding: 20px;
+            color: #fff;
+            text-align: center;
+            position: relative;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to the Christmas Wonderland!</h1>
+    </header>
+
+    <div class="snowflakes">
+        <div class="snowflake" style="left: 20%; width: 10px; height: 10px; animation-duration: 8s;"></div>
+        <div class="snowflake" style="left: 40%; width: 12px; height: 12px; animation-duration: 7s;"></div>
+        <div class="snowflake" style="left: 60%; width: 8px; height: 8px; animation-duration: 9s;"></div>
+        <div class="snowflake" style="left: 80%; width: 15px; height: 15px; animation-duration: 6s;"></div>
+        <div class="snowflake" style="left: 30%; width: 10px; height: 10px; animation-duration: 5s;"></div>
+    </div>
+
+    <main>
+        <div class="tree">
+            <div class="lights">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <div class="greeting">
+            <p>May your holidays be merry and bright!</p>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Christmas Wonderland. All rights reserved.</p>
+    </footer>
+</body>
+</html>

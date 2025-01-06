@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  /* The container holds the image and the overlay */
+  .container {
+    position: relative; /* Allows elements inside to be positioned relative to the container */
+    width: 50%; /* Container width is 50% of the page */
+  }
+
+  /* Styling the image */
+  .image {
+    display: block; /* Ensures no extra spaces appear around the image */
+    width: 100%; /* Image takes up the entire width of the container */
+    height: auto; /* Maintains the original aspect ratio of the image */
+  }
+
+  /* The hidden overlay that slides in from the top */
+  .overlay {
+    position: absolute; /* Allows positioning over the image */
+    top: 100%; /* Starts completely above the image */
+    left: 0; right: 0; /* Stretches overlay to match the container's width */
+    background-color: #008CBA; /* Blue background color */
+    overflow: hidden; /* Ensures no content spills out */
+    width: 100%; /* Matches the width of the container */
+    height: 0; /* Initially, the overlay is invisible (0 height) */
+    transition: 0.5s ease; /* Adds smooth animation when the overlay slides */
+  }
+
+  /* When the mouse hovers over the container, show the overlay */
+  .container:hover .overlay {
+    top: 0; /* Overlay starts from the bottom edge */
+    height: 100%; /* Overlay expands to cover the image */
+  }
+
+  /* Text inside the overlay */
+  .text {
+    color: white; /* White text color */
+    font-size: 20px; /* Text size */
+    position: absolute; /* Position text relative to the overlay */
+    top: 50%; left: 50%; /* Center the text in the overlay */
+    transform: translate(-50%, -50%); /* Perfectly centers the text */
+    white-space: nowrap; /* Prevents text from wrapping to a new line */
+  }
+</style>
+</head>
+<body>
+
+<h2>Slide in Overlay from the Top</h2>
+
+<!-- The container includes the image and overlay -->
+<div class="container">
+
+  <!-- The main image -->
+  <img src="avator.jpg" alt="Avatar" class="image">
+
+  <!-- The hidden overlay that slides in on hover -->
+  <div class="overlay">
+    <!-- Text inside the overlay -->
+    <div class="text">Hello World</div>
+  </div>
+  
+</div>
+
+</body>
+</html>
+

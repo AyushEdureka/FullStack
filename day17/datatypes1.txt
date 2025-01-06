@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        //data types:
+
+        //1. STRING=TEXT; 
+        var str="PRABHU"; // string value stored in ""
+        console.log(typeof(str));
+
+        //2.NUMBER=interger
+        var age=32;
+        console.log(typeof(age))
+
+        //3.BOOLEAN- true or false
+        var pranab=true;
+        console.log(typeof(pranab))
+
+        //UNDEFINED- //no value has been assigned
+        var x;
+        console.log(typeof(x))
+
+        //NULL
+        //discount offer= 0
+        var y=null;
+        console.log(typeof(y))
+        
+        //BIGINT -used to store larger or bigger number
+        var radiusofearth= 456563456324565632732n; // use n notation at last of number ;
+        console.log(typeof(radiusofearth));
+
+        //SYMBOL- UNIQUE ID
+        var c = Symbol(44);
+        console.log(typeof(c));
+    </script>
+</body>
+</html>
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+    //    var name="Brain";
+    //    var name="odek";
+    //    console.log(name);  //print statement console.log()
+    //    console.log(name1);
+
+    
+    //    let age=21;
+    //    let age=24; // error you cannot declare same variable name
+    //    console.log(age)
+
+
+    // const pi= 3.14;   // constant value you cannot chnage
+    // const deliveryfree = 20; 
+    // console.log(pi)
+    // console.log(deliveryfree);
+    </script>
+</body>
+</html>

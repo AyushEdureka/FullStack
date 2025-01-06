@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!-- IMAGE TAG -->
+
+    <h1>NETFLIX</h1>
+    <img src="./download.jfif" alt="sorry" style="top: auto;" height="45"> 
+     <!-- <img src="./download.jfif" alt="sorry" style="top:auto" height="100px" width="120px"> -->
+      
+    
+    
+    <!-- DIV TAG -->
+    
+    <div style="background-color: brown;" style="font-size:large;" title="div tag" >
+        <p style="font-size: medium;">WELCOME TO ENTERTAINMENT ZONE,Watch your fav mood in a click</p>
+    </div>
+
+    <!-- <div style="background-color: blue;" ><p> div takes 100% width</p></div> -->
+
+
+    <!-- SPAN TAG -->
+    
+    <span style="background-color:rgb(46, 23, 250)" style="font-size: larger;" title="this is span">Login</span>
+    <h1>Signup now</h1><br>
+    
+    
+    
+    
+    <!-- SELECT TAG -->
+    <select>
+        <option selected>Watchlist</option>
+        <option value="ad1">Adventure</option>
+        <option>movieename</option>
+        <option>Rom-Com</option>
+        <option>Sci-Fi</option>
+        <option>Thriller</option>
+        <option disabled>kids</option>
+        <option label="anime">animationtion</option>click
+        <option text="choose">choose</option>
+    </select><br><br>
+
+      
+      
+    gmail:<input type="text"></input><br><br>
+    <input type="button" value="Submit"><br>
+    <h1>Feedback</h1><br>
+    <form method="post">
+       name:<input type="text" placeholder="Enter you name" required><br><br>
+       Idpass:<input type="password" placeholder="Enter your password"><br><br>
+       Feedback:<textarea rows="" cols="20"></textarea><br><br>
+       RATINGS:<input type="hidden" name="RATINGS"><br>
+       <input type="radio" name="RATINGS" value="1">1
+       <input type="radio" name="RATINGS" value="2">2
+       <input type="radio" name="RATINGS" value="3">3
+       <input type="radio" name="RATINGS" value="4">4
+       <input type="radio" name="RATINGS" value="5">5<br>
+       <input type="submit" value="submit"><br><br>
+       gender:<input type="radio" name="gender" value="male">male
+       <input type="radio" name="gender" value="female">female
+       </form>
+       <button type="button">register1</button>
+       <input type="button" value="register2">
+       <textarea rows="" cols="11"></textarea>
+
+
+<button>sub</button>
+
+
+
+       <table border="2px" style="background-color: blanchedalmond;" cellpadding="10px" cellspacing="5px">
+            <tr>
+                <th>Content</th>
+                <th>Movies</th>
+                <th>Series</th>
+                <th>Anime</th>
+                <th>kids</th>
+            </tr>
+            <tr>
+            <td>Ratings</td>
+            <td>***</td>
+            <td>****</td>
+            <td>***</td>
+            <td>**</td>
+        </tr>
+          </table><br><br>
+
+        <ol type="i">
+        <li>Career</li>
+        <li>Contact us</li> 
+        <li>Support</li>
+        <li>Feedback</li>
+        </ol>
+
+        <dl style="text-align: center;" style="font-size: large;">
+            <dt>Netflix</dt>
+            <dd>It is a online OTT platflorm,which is currently top rated.Watch Anywhere,Anytime,Anydevice </dd>
+        </dl>
+    </body>
+</html>

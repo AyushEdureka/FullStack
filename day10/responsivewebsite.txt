@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @media screen and (min-width:320px) and (max-width:480px){
+            body{
+                background-color: blue;
+            }
+        }
+
+        @media screen and (min-width:481px) and (max-width:768px){
+            body{
+                background-color: orange;
+            }
+        }
+
+        
+    </style>
+</head>
+<body>
+    <h1>Responsive website</h1>
+    <p>@media is the tag which help us to create responsive website
+        for all the device
+    </p>
+</body>
+</html>
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            font-style: italic;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        header{
+            background-color: crimson;
+            color: white;
+            padding: 2em;
+        }
+
+        nav ul{
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li{
+            display: inline;
+            margin: 10px;
+        }
+
+        main{
+            padding: 1em;
+        }
+
+        footer{
+            background-color: burlywood;
+            color: #fff;
+            padding: 1em;
+        }
+
+        /*style for mobile device */
+        @media (max-width:600px){
+            nav ul li{
+                display: block;
+                margin: 10px 0;
+            }
+
+            main{
+                padding: 0.5em;
+                background-color: coral;
+            }
+        }
+
+
+        /*style for tablet device */
+        @media (min-width:601px) and (max-width:1024px){
+           
+            main{
+                padding: 0.5em;
+                background-color: rgb(163, 55, 16);
+            }
+
+            header,footer{
+                padding: 1.5em;
+                background-color: rgb(179, 179, 195);
+            }
+        }
+
+
+
+        /*style for desktop and above */
+        @media (min-width:1025px){
+           
+
+            main{
+                max-width: 800px;
+                background-color: brown;
+                margin: auto;
+            }
+
+            header,footer{
+                padding: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My Personal Page</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+     </header>
+
+
+     <main>
+        <article>
+            <h2>Welcome to my Blog!</h2>
+            <p>This is the sample Blog ! resize
+                your browser window to see responsive design in action
+            </p>
+        </article>
+     </main>
+
+     <footer>
+        <p>&copy; 2024 My Personal Blog</p>
+     </footer>
+</body>
+</html>

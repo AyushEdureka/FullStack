@@ -1,0 +1,118 @@
+// var nam='ayush'; 
+// // var nam='jiya'; 
+// // console.log(nam)
+
+//         // using VAR KEYWORD
+//         // var age = 32;
+//         // var name = "JOHN"
+
+//         // using LET KEYWORD
+//         // let age=32;
+//         // let name="john"
+
+
+//         //using const(constant) keyword
+//         // const brand="amazon";
+//         // const pi=3.14;
+
+
+//         // 1.VAR KEYWORD-GLOBAL SCOPE
+
+//         var name='Saritha'; // global variable
+
+//         function MADHU(){
+// //console.log(name); -- SARITHA
+//         }
+//         MADHU()
+    
+// console.log(name)  //SARITHA
+
+
+// //2.LOCAL SCOPE-A VARIABLE DECLARED INSIDE A FUNCTION CAN ONLY BE CALLED WITHIN FUNCTION
+
+// // function greet(){
+// //     var age=32 // local varible
+// //     //console.log(age);
+    
+// // }
+// // greet()
+
+// // console.log(age)  //error  
+
+
+
+// // LET KEYWORD
+// // function xyz(){
+
+// //     if(true){
+// //         let z=10;
+// //         // console.log(z);
+// //     }
+// //     console.log(z) 
+// // }
+// // xyz()
+
+// // console.log(z)  --error
+
+
+// // let person="john"
+// // let carName="bmw"
+// // let price="1000"
+
+// let person="alice",carName="volvo",price=2000;
+
+
+
+
+
+
+// DATATYPE
+//1.STRING-TEXT
+  var str="HELLO"
+  console.log(typeof(str));
+
+//2.NUMBER-INTEGER
+var age=32
+console.log(typeof(age))
+
+//3.BOOLEAN
+var jiya= true;
+console.log(typeof(jiya))
+
+//4.UNDEFIENED
+var x;
+console.log(typeof(x))
+
+
+//5.NULL
+var y=null;
+console.log(y)
+
+
+//BigInt-used to store larger or bigger num
+var radiusofsun = 36432436453645334345;
+console.log(typeof(radiusofsun))
+
+//SYMBOL-UNIQUE ID
+// var c= Symbol(44)
+// console.log(typeof(c))
+
+//ARRAY- SQUARE BRACKET,INDEX STARTS WITH 0
+
+var arr=['hemant',32,'edureka',888,'apple','car','true']
+console.log(arr);
+console.log(arr[5]);
+console.log(arr.length);
+
+
+//object-KEY(left) VALUE(right) PAIR,currly braces
+
+var obj={
+    name:'ronaldo',
+    age:30,
+    club:'man utd'
+}
+console.log(typeof(obj))
+console.log(obj)
+console.log(obj.club)  
+console.log(obj.name);

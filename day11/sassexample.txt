@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            border-radius: 3px;
+            text-align: center;
+            animation-name: first;
+            animation-duration: 10s;
+        }
+
+        /* //@keyframe it is used to give animation */ 
+
+
+        /* example 1st */
+        /* @keyframes first{
+            from {background-color: red;}
+
+            to {background-color: blue;}
+        } */
+
+
+        /* example second- more than 1 color */
+
+        @keyframes first{
+            0% {background-color: red;}
+            25% {background-color: yellow;}
+            50% {background-color: blue;}
+            100% {background-color: brown;}
+        }
+
+    </style>
+</head>
+<body>
+    <h1>CSS ANIMATION</h1>
+    
+    <div>HI</div>
+
+     <p>When animation will be done it comes back to orginal style</p>
+</body>
+</html>
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet"  href="style.css">
+</head>
+<body>
+    <h1>WELCOME TO SASS</h1>
+    <p>THIS IS SASS STEP TO USE: INSTALL LIVE SASS COMPILER FROM EXTENSION
+        ,STEP 2 SAVE FILE WITH .SCSS ,THEN USE SASS STYLING
+    </p>
+</body>
+</html>
+
+//define variable
+
+$primary:red;
+$secondary: blue;
+
+//css style adding 
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: lightcoral;
+
+
+h1{
+    color: $primary;
+    text-align: center;
+}
+
+p{
+    color: $secondary;
+}
+
+}
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <h1>WELOCME TO sass</h1>
+    <p>This is a simple webapge</p>
+</body>
+</html>
+
+
+//define the variable
+//$ is sign for variable
+
+$background-color: coral;
+$text-color:white;
+
+body{
+    background-color: $background-color;
+    color: $text-color;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 20px;
+
+    h1{
+       font-size: 2rem;
+       text-align: center;
+    }
+
+    p{
+        font-size: 1.5 rem;
+    }
+}
+

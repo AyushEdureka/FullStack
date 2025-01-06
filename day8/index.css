@@ -1,0 +1,21 @@
+body{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.banner{
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-shadow: 2px 2px 4px black;
+
+    background-color: bisque;
+    background-image: url('./OIP.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    
+
+}

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Personal Blog</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    body {
+  font-family: Arial, sans-serif;
+  font-style: italic;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+header {
+  background-color: #b92222;
+  color: #fff;
+  padding: 2em;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 10px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+main {
+  padding: 1em;
+}
+
+footer {
+  background-color: #a61818;
+  color: #fff;
+  padding: 1em;
+}
+
+/* Styles for mobile devices (max-width: 600px) */
+@media (max-width: 600px) {
+  nav ul li {
+    display: block;
+    margin: 10px 0;
+  }
+
+  main {
+    padding: 0.5em;
+  }
+}
+
+/* Styles for tablets and up (min-width: 601px and max-width: 1024px) */
+@media (min-width: 601px) and (max-width: 1024px) {
+  main {
+    padding: 1.5em;
+  }
+
+  header, footer {
+    padding: 1.5em;
+    background-color: blue;
+  }
+}
+
+/* Styles for desktops and up (min-width: 1025px) */
+@media (min-width: 1025px) {
+  main {
+    max-width: 800px;
+    margin: auto;
+    padding: 2em;
+  }
+
+  header, footer {
+    padding: 2em;
+  }
+
+  nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+  }
+}
+</style>
+<body>
+  <header>
+    <h1>My Personal page</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Contact us</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <article>
+      <h2>Welcome to My Blog!</h2>
+      <p>This is a sample blog post. Resize the browser window to see the responsive design in action.</p>
+    </article>
+  </main>
+  <footer>
+    <p>&copy; 2024 My Personal Blog</p>
+  </footer>
+</body>
+</html>

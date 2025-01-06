@@ -1,0 +1,18 @@
+<form>
+
+  NAME:<input type="text"  placeholder="enter your name" required><br><br>
+
+  Email:<input type="email" placeholder="enter your email" required><br><br>
+
+  Password:<input type="password" required><br><br>
+
+  number:<input type="number" required><br>
+
+  PHONENO:<input type="tel"  maxlength="10"><br><br>
+
+  <!-- <input type="button" value="Signin"> -->
+
+   <button type="submit">clickme</button>
+
+
+</form>
