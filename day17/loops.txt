@@ -1,0 +1,70 @@
+// for(i=0;i<=10;i++){
+//     console.log('value of i:' +i);
+// }
+
+// for(i=0;i<=5;i++){
+//     for(j=1;j<=4;j++){
+//     console.log('i :' + i + 'j :'+j)
+// }
+// console.log('j is loop is over')
+// }
+// console.log('over')
+
+// const students=['anaya','ravinder','deepak','priyal','hammed'];
+// for(i=0;i<students.length;i++){
+//     console.log(`students ${i + 1}: ${students[i]}`);
+// }
+
+// let i =0;
+// while(i<=5){
+//     console.log(i);
+//     i++;
+// }
+
+
+
+
+// let luckynonum= Math.floor(Math.random()*6)+1 
+// while(true){
+//     guess=prompt('enter any number from 1 t 6');
+//     if(luckynonum==guess){
+//         alert('you won')
+//         break;
+//     }else{
+//         alert('butter luck next time')
+//     }
+// }
+
+// let success=false;
+// let attempt=0;
+// do{
+//     attempt ++;
+//     success=Math.random()>0.5;
+//     console.log(`Attempt ${attempt} ${success ? 'success' : 'failed'}`);
+    
+// }while(!success &&  attempt<3);
+// if(!success){
+//     console.log('request failed 3 attempts')
+// }
+
+
+// std={
+//     name:'xyz',
+//     salary:346567576576576,
+//     age:34,
+//     city:'nyc'
+// }
+// for(i in std){
+//     console.log(`${i} : ${std[i]}`);
+// }
+
+
+// const orders=[
+//     { id: 1, item :"laptop",quantity:1 },
+//     { id: 2, item :"iphone",quantity:2 },
+//     { id: 3, item :"shoes",quantity:3 }
+// ];
+// orders.forEach(order=>{
+//     console.log(`order ${order.id} : ${order.item} `);
+
+// });

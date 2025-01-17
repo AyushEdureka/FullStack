@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        //FOR LOOP HELP US TO TO THE SAME TASK IN ONE LINE
+        //syntax
+        
+        // for(task){
+
+        //}
+
+        //task-print no 0 to 10;
+
+        console.log("1")
+        console.log("2")
+        console.log("3")
+        
+
+
+        console.log("10");
+
+        let x=10
+        // x++ x=10+1 = 11
+
+        // for(i=0;i<=10;i++){
+    
+        //     console.log('value of i :' + i);
+
+        // }
+
+        for(i=1;i<=17;i++){
+            console.log("Hello Students " + i)
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // while loop we dont know extact no of repition
+    // then we check the condition
+
+    //syntax
+    //while(condition){
+    //  }
+
+    let count = 1;
+
+    while(count<=5){
+       console.log("i love coding!");
+       count++;
+    }
+    
+    </script>
+</body>
+</html>
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let luckyno = Math.floor(Math.random()*6)+1
+
+        while(true){
+            guess= prompt('Enter any number from 1 to 6');
+
+            if(luckyno == guess){
+               
+                alert('YOU WON SQUID GAME ')
+                break;
+            }else{
+               alert('BETTER LUCK NEXT TIME')
+            }
+        }
+
+
+    </script>
+</body>
+</html>

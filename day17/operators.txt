@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        //ARITHMETIC = +,-,*,/ ,%
+
+        var a=10;
+        var b =7;
+
+        console.log(a+b);  //17
+        console.log(a-b);  // 3
+        console.log(a*b);  //70    * multipication
+        console.log(a/b);  //1.33
+        console.log(a%b);  // 3
+    </script>
+</body>
+</html>
+
+
+ <script>
+        //ASSIGNMENT - TO ASSIGN A VALUE
+        let x=10; //Assigned a value 10 to variable x;
+        x+=3;     // x = x+3;  =>13
+        x-=3;      // x= x-3;   => 7
+        x*=3;      // x=x*3;    =>30
+        x/=2;     // x=x/2;     =>5 
+    </script>
+
+
+<script>
+        let a="10";  //"sting" is a part of string
+        let b=10;    // number
+
+        
+        //console.log(a>b);  //10>10  - false
+        //console.log(a<b);  //10<10  - false
+
+        console.log(a==b);  // == check the value //true
+        
+        //console.log(a>=b); //10>=10  true
+        //console.log(a<=b)  // 10<=10 true
+
+        console.log(a===b); // === check value and data type - false  => bcz "10" is a diff data type
+
+
+        
+        
+    </script>
+
+
+
+
+
+<script>
+    let a=20;
+    let b=10;
+
+    console.log(a>b && b<a)  //a>b 20>10-true && b<a 10<20- true // and- both condition should be true => o/p true
+   
+    
+    console.log(a<b || b<a)  //a<b 20<10- false || b<a 10<20-true // OR- Any one condition is true then op => true
+
+    
+    // ! -negation =>  give oppostite of the value
+        let c= false;
+        console.log(!c); // true
+    </script>
