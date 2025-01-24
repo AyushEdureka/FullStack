@@ -1,3 +1,4 @@
+<<<<<<< HEAD
  <script>
         //IF STATEMENT = it will always check for true part/condition
 
@@ -130,4 +131,138 @@
 
             console.log("soory you are not elegible");
         }
+=======
+ <script>
+        //IF STATEMENT = it will always check for true part/condition
+
+        let age=8;
+        // syntax- if(condition)
+
+        if(age>=18){
+           
+            console.log("Congrats you are eligible for vote");
+
+        }
+    </script>
+
+
+
+<script>
+
+        //ELSE IF STATEMENT = IT WILL MORE THAN 2 CONDITION;
+
+        let temp = 21;
+
+        if(temp >=30){
+            console.log("It is a sunny day")
+        }
+        else if(temp>25){
+            console.log("it is lit warm outside")
+        }
+        else if(temp>20){
+            console.log("it is a nice weather")
+        }
+        else{
+            console.log("it is cold outside")
+        }
+    </script>
+
+
+
+
+
+ <script>
+        let day=9;
+
+        switch(day){
+
+            case 1:
+                console.log("Monday");
+                break;
+            case 2:
+               console.log("Tuesday");
+               break;
+            case 3:
+               console.log("Wednesday");
+               break;
+            case 4:
+               console.log("Thursday");
+               break;
+            case 5:
+                console.log("Friday");
+                break;
+            case 6:
+                console.log("Saturday");
+                break;
+            case 7:
+                console.log("Sunday");
+                break;
+            default:
+                console.log("invalid day")    
+            
+        }
+    </script>
+
+
+
+
+
+ <script>
+        let choice = 3;
+        let snack
+
+        switch(choice){
+            case 1:
+                snack='Chips';
+                break;
+
+            case 2:
+                 snack='Chocolate';
+                break;
+
+            case 3:
+                 snack='Oreo'
+                break;
+
+            case 4:
+                snack='Soda'
+                break; 
+
+            case 5:
+                snack='Crips & Cookies'
+                break;
+
+            default:
+              snack='Inavlid choice'
+
+
+        }
+        console.log(snack);
+
+
+    </script>
+
+
+
+ <script>
+        //IF ELSE STATMENT - IF GIVES OUT FOR TRUE PART AND ELSE GIVES FOR FALSE PART
+
+        
+        // syntax- if(condition){
+        //    true }
+        //else{
+        //    false
+        //   }
+        let age=18;
+
+         if(age>=18){
+           
+            console.log("Congrats you are eligible for vote");
+
+         }
+         else{
+
+            console.log("soory you are not elegible");
+        }
+>>>>>>> bbc108c72e3d2a2b5b8a4cf07812001b7cf34fed
     </script>
