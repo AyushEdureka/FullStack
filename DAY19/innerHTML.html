@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="myH">HELLO LEARNERS</h1>
+
+    <button onclick="myFun()">Click me to chnage</button>
+
+
+    <script>
+        function myFun(){
+            var xyz ="Welcome to Innner HTML";
+
+            //element-[tag] selector from HTML body
+            //body refers as document in js
+
+            const ele = document.getElementById("myH")
+
+            //inner HTML - change or update the conent
+
+            ele.innerHTML= xyz;
+
+
+        }
+    </script>
+</body>
+</html>

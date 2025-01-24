@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Change Background Color</title>
+  <style>
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+        margin: 0;
+        color: rgb(143, 75, 50);
+    
+    }
+    
+    marquee{
+        padding: 10px;
+    }
+
+    button{
+      margin: 10px;
+      border-radius:10px ;
+      height: 30px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Click a Button to Change the Background Color</h1>
+  <button id="redButton" >Red-Theme</button>
+  <button id="blueButton">Blue-Theme</button>
+  <button id="greenButton">Green-Theme</button><br><br>
+
+  <marquee style="background-color:white">Click me: to change </marquee>
+
+  <script>
+    // Select the buttons
+    const redButton = document.getElementById("redButton");
+    const blueButton = document.getElementById("blueButton");
+    const greenButton = document.getElementById("greenButton");
+
+    // Add click events to change the background color
+    redButton.addEventListener("click", () => {
+      document.body.style.backgroundColor = "red";
+    });
+
+    blueButton.addEventListener("click", () => {
+      document.body.style.backgroundColor = "blue";
+    });
+
+    greenButton.addEventListener("click", () => {
+      document.body.style.backgroundColor = "green";
+    });
+  </script>
+</body>
+</html>

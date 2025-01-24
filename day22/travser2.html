@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- RULE: TO Traveling
+    1. Child to parent:  
+    SELECT CHILD ELEMENT/TAG 
+    USE .PARENTELEMENT METHOD
+
+
+    2.PARENT TO CHILD
+    SELECT PARENT FIRST
+    USE .CHILDREN METHOD -->
+
+    
+    
+        <!-- <div id="parent">
+            <p id="child">Child Elemnt</p>
+            </div>
+
+            <script>
+                //Traveling from child to parent
+
+                const child = document.getElementById("child")   ///step 1 child tag(p) is selected
+                const parent = child.parentElement;     //parentElement -keyword to move to parent
+                console.log(parent.id);   //print the value of parent 
+            </script> -->
+
+
+
+            <div id="parent">
+                <p>child 1</p>
+                <p>Child 2</p>
+
+            </div>
+
+            <script>
+                ///traveling fro  parent to child
+                const parent  = document.getElementById("parent");  // div selected n store in variable parent
+                const children = parent.children;  //.children it will move parent(div) to children(p)
+                console.log(children[0].textContent);
+                console.log(children[1].textContent);
+            
+            </script>
+
+
+
+    
+</body>
+</html>

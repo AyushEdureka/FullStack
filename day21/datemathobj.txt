@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        // let abc = 'Date';
+        // console.log(typeof(abc)) // string
+
+        // let xyz = new Date();
+        // console.log(typeof(xyz))  // whenever we add new keyword into variable it becomes object
+  
+  
+    let now= new Date();   //now - object
+    //console.log(varibalename.methodname())
+
+    console.log(now.getFullYear()); // 
+    console.log(now.getMonth());  // jan starts with 0
+    console.log(now.getDate());
+    console.log(now.getDay()); // monday starts with 1
+    console.log(now.getHours())
+    
+  
+  </script>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        console.log("Pi :" , Math.PI);
+        console.log("Sqaure root of 2 :" , Math.SQRT2);  //sqaure root of 2
+        console.log("Sqaure of 16 :" , Math.pow(16,2));
+        console.log(Math.sqrt(625));
+        console.log(Math.ceil(6.2))  //ceil convert to nearest higher whole no: 7
+        console.log(Math.floor(5.8))  //floor convert to neasrest smallest whole no: 5
+
+        // round -    base value >0.5> next value of base  
+        console.log(Math.round(4.5))
+        console.log(Math.round(4.6))
+        console.log(Math.round(4.4))
+
+    </script>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let students={
+            name:"Mamoud",
+            age:23,
+            height:"6 feet",
+            eat:function(){
+                console.log("Eat Heathly")
+            }
+
+        };
+        
+        //console.log(objname.keyname)
+        console.log(students.name);
+        //objname.keyname()
+        students.eat();
+
+    </script>
+</body>
+</html>

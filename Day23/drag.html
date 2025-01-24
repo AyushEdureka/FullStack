@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="rectangle" draggable="true" style="width: 100px; height: 50px; background-color: lightblue;
+    cursor: grab; text-align: center; line-height: 50px;">
+    Drag me!
+     </div>
+
+     <div id="dropZone" style=" width:150px ; height: 150px; border: 2px dashed gray;
+     margin-top: 20px; text-align: center; line-height: 150px">
+     Drop HERE
+     
+ 
+     </div>
+
+
+     <script>
+        const rectangle = document.getElementById("rectangle");
+        const dropZone = document.getElementById("dropZone")
+
+        rectangle.addEventListener("dragstart",function(event){
+            console.log("Drag started!")
+            event.dataTransfer.setData("text",event.target.id);
+        })
+
+        dropZone.addEventListener("dragover",function(event){
+          console.log("Dragging over the drop zone")
+          event.preventDefault(); //Allows us to drop
+
+        });
+
+        dropZone.addEventListener("drop",function(event){
+            console.log("Dropped")
+            const data = event.dataTransfer.getData("text");
+            const draggedElement= document.getElementById(data);
+            dropZone.appendChild(draggedElement);
+
+        })
+     </script>
+</body>
+</html>

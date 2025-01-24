@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="mybutton">Click me!</button>
+    <p id="message"></p>
+
+    <script>
+        //1st step select the elements where we want to perfomr action
+
+        const button = document.getElementById('mybutton');
+        const message = document.getElementById('message');
+
+        //2nd step Always add event listner ,type of event,then we write function
+
+        button.addEventListener('click',function(){
+            message.textContent="product added to cart!"
+        });
+    </script>
+</body>
+</html>

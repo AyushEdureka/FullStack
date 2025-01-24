@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .grandparent{
+            border: 2px solid black;
+            margin: 20px;
+            height: 200px;
+        }
+        .parent{
+            border: 2px solid blue;
+            margin: 20px;
+            height: 150px;
+        }
+        .child{
+            border: 2px solid red;
+            margin: 20px;
+            height: 100px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="grandparent">Action1
+
+    <div class="parent">Action2
+
+        <div class="child">Action3
+
+
+        </div>
+    </div>
+</div>
+
+<script>
+    //Event bubbling = low to high
+
+    // const grandparent = document.querySelector('.grandparent');
+    // const parent = document.querySelector('.parent');
+    // const child = document.querySelector('.child');
+
+
+    // grandparent.addEventListener('click',function(){
+    //     alert('Grandparent is clicked')
+    // })
+
+    
+    // parent.addEventListener('click',function(){
+    //     alert('parent is clicked')
+    // })
+
+
+    
+    // child.addEventListener('click',function(){
+    //     alert('child is clicked')
+    // })
+
+
+    ///Event Capturing  = high to low
+    const grandparent = document.querySelector('.grandparent');
+    const parent = document.querySelector('.parent');
+    const child = document.querySelector('.child');
+
+
+    grandparent.addEventListener('click',function(){
+        alert('Grandparent is clicked')
+    },true)
+
+    
+    parent.addEventListener('click',function(){
+        alert('parent is clicked')
+    },true)
+
+
+    
+    child.addEventListener('click',function(){
+        alert('child is clicked')
+    },true)
+
+
+    </script>
+</body>
+</html>

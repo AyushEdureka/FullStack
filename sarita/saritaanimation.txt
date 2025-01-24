@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+     
+     div{
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        border-radius: 3px;
+        position: relative;
+        /* Relative we use for single alone element to move in four direction */
+        /* animation name is used to give a name and we can acces other property */
+        animation-name: first;    
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        
+     }
+
+     /* TO USE ANIMATION WE HAVE TAG CALLED AS @keyframes */
+     /* @keyframes first{
+        from {background-color: red;}
+
+        to {background-color: blue;}
+     } */
+
+     /* @keyframes first{
+        0% {background-color: red;}
+        25% {background-color: yellow;}
+        50% {background-color: blue;}
+        75% {background-color: pink;}
+        100% {background-color: brown;}
+     } */
+
+     
+     @keyframes first{
+        0% {background-color: red; left: 0px; top: 0px;}
+        25% {background-color: yellow; left: 200px; top: 0px;}
+        50% {background-color: blue; left: 200px; top: 200px;}
+        75% {background-color: pink; left: 0px; top: 200px;}
+        100% {background-color: brown; left: 0px; top: 0px;}
+     }
+
+
+
+
+    </style>
+</head>
+<body>
+
+    <!-- ANIMATION- MOTION -->
+    
+    <h1>CSS ANIMATION</h1>
+    <div>Hii</div>
+    <p>When the animation is done it goes back to its original style</p>
+</body>
+</html>
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+
+</head>
+<body>
+    <h1>WELCOME TO SASS</h1>
+    <p>THIS IS A SASS</p>
+</body>
+</html>
+
+
+
+
+// variable - conatiner or box that help us to store some value
+//$variablename:value;
+
+$sarita:white;
+$primary:red;
+$secondary:blue;
+
+//css style and sass 
+body{
+    
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: $secondary;
+
+    //in sass we write every tag inside the body
+
+ h1{
+     color: $sarita;
+     text-align: center;
+ }
+
+ p{
+    background-color: coral;
+    color: $primary;
+ }
+
+}

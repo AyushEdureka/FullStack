@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="myId">Hello guys</p>
+
+    <div class="myclass">Class selector -0</div>  
+    <div class="myclass">Class selector -1</div>
+
+
+    <!-- index number when you have same tags n classes  -->
+    <p>Para-0</p>
+    <p>Para-1</p>
+
+
+    <div class="box">First</div>
+    <div class="box">Second</div>
+   
+    
+    <script>
+      
+      //SELECTING ELEMENT--- Chose Tag from body
+
+      //1.select by its id
+      //method name getElementById
+
+      const ele = document.getElementById("myId")
+      console.log(ele.textContent)
+
+
+      //2. GetELEMENTBYCLASSNAME
+
+      const ele1 = document.getElementsByClassName("myclass")
+      console.log(ele1[0].textContent)
+
+      // 3. GetElementbyTagName
+      const ele2= document.getElementsByTagName("p")
+      console.log(ele2[2].textContent)
+
+      //4.QuerySelector- it the follows the CSS selector #id,.class
+
+      const ele3 = document.querySelector(".box")
+      console.log(ele3.textContent);
+
+
+
+
+
+      
+
+
+
+
+
+        </script>
+</body>
+</html>
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <p id="text">Hii everyone</p>
+
+    <script>
+        const ele= document.getElementById("text")
+        ele.textContent ="welcome to js";
+        console.log(ele.textContent)
+    </script> -->
+
+
+
+    <!-- <div id="container"><p>Old content</p></div>
+
+    <script>
+        const ele1= document.getElementById("container");
+        ele1.innerHTML="Text UPATED WITH INNER HTML"
+     console.log(ele1.innerHTML)
+    </script> -->
+
+    <!-- Change the style -->
+    <!-- <p id="myId">Styled Text</p>
+
+    <script>
+        const ele3= document.getElementById("myId")
+        ele3.style.color="red";
+        ele3.style.fontFamily="Arial";
+        ele3.style.backgroundColor="blue";
+    </script> -->
+
+
+    
+
+
+
+
+
+
+
+</body>
+</html>
+
+
+
+
+
+<body>
+    
+    <div id="parent">parent
+        <p id="child">Child Element</p>
+    </div>
+
+    <script>
+        const child = document.getElementById("child")
+        const Parent = child.parentElement; 
+        console.log(Parent);
+    </script>
+</body>
+</html>

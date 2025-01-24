@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="circle" style="width: 50px; height: 50px; background-color: red; border-radius: 50%; position: absolute;">
+
+    </div>
+
+    <script>
+        const circle = document.getElementById("circle")
+
+      //for our mouse down (start dragging- touchstart)
+      circle.addEventListener("mousedown",function(event){
+         console.log("Mouse down!-touch thr circle")
+         document.addEventListener("mousemove",onMouseMove)
+      })
+
+
+        //For mouse move(dragging)
+        function onMouseMove(event){
+          circle.style.left = event.pageX-25 + "px" 
+          circle.style.top = event.pageY -25 + "px"
+          console.log("Mouse moving-circle moving");
+
+        }
+
+
+        //For mouse up(stop dragging- touchend)
+        document.addEventListener("mouseup",function(){
+            console.log("Mouse up it stop dragging")
+            document.removeEventListener("mousemove",onMouseMove);
+        });
+        </script>
+        
+</body>
+</html>
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="rectangle" draggable="true" style="width: 100px; height: 50px; background-color: lightblue;
+    cursor: grab; text-align: center; line-height: 50px;">
+    Drag me!
+     </div>
+
+     <div id="dropZone" style=" width:150px ; height: 150px; border: 2px dashed gray;
+     margin-top: 20px; text-align: center; line-height: 150px">
+     Drop HERE
+     
+ 
+     </div>
+
+
+     <script>
+        const rectangle = document.getElementById("rectangle");
+        const dropZone = document.getElementById("dropZone")
+
+        rectangle.addEventListener("dragstart",function(event){
+            console.log("Drag started!")
+            event.dataTransfer.setData("text",event.target.id);
+        })
+
+        dropZone.addEventListener("dragover",function(event){
+          console.log("Dragging over the drop zone")
+          event.preventDefault(); //Allows us to drop
+
+        });
+
+        dropZone.addEventListener("drop",function(event){
+            console.log("Dropped")
+            const data = event.dataTransfer.getData("text");
+            const draggedElement= document.getElementById(data);
+            dropZone.appendChild(draggedElement);
+
+        })
+     </script>
+</body>
+</html>

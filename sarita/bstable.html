@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Task Management Table</title>
+  <!-- Include Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* Body styling */
+    body {
+      background-color: #f0f4f8;
+      font-family: Arial, sans-serif;
+    }
+    /* Center the table container */
+    .table-container {
+      margin: 20px auto;
+      width: 90%;
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+      padding: 20px;
+    }
+    /* Table header styling */
+    th {
+      background-color: #007bff;
+      color: white;
+      text-align: center;
+      font-weight: bold;
+    }
+    /* Table rows */
+    td {
+      text-align: center;
+      vertical-align: middle;
+    }
+    /* Interactive hover effect for rows */
+    tr:hover {
+      background-color: #f1f9ff;
+      transform: scale(1.01);
+      transition: all 0.2s;
+    }
+    /* Bordered rows */
+    table {
+      border-collapse: separate;
+      border-spacing: 0;
+    }
+    tr {
+      border: 2px solid #dfe6ed;
+    }
+    /* Badge styles */
+    .badge {
+      font-size: 0.9rem;
+    }
+    /* Table title */
+    h2 {
+      color: #007bff;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Table container -->
+    <div class="table-container">
+      <h2 class="text-center mb-4">Team Task Tracker</h2>
+      <!-- Bootstrap table -->
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Task Name</th>
+            <th>Assigned To</th>
+            <th>Due Date</th>
+            <th>Status</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Complete Website Design</td>
+            <td>John Doe</td>
+            <td>2025-01-30</td>
+            <td><span class="badge bg-success">Completed</span></td>
+            <td>
+              <button class="btn btn-info btn-sm">View</button>
+              <button class="btn btn-warning btn-sm">Edit</button>
+            </td>
+          </tr>
+          <tr>
+            <td>Prepare Sales Report</td>
+            <td>Jane Smith</td>
+            <td>2025-02-01</td>
+            <td><span class="badge bg-warning">In Progress</span></td>
+            <td>
+              <button class="btn btn-info btn-sm">View</button>
+              <button class="btn btn-warning btn-sm">Edit</button>
+            </td>
+          </tr>
+          <tr>
+            <td>Team Meeting</td>
+            <td>Michael Brown</td>
+            <td>2025-02-03</td>
+            <td><span class="badge bg-danger">Pending</span></td>
+            <td>
+              <button class="btn btn-info btn-sm">View</button>
+              <button class="btn btn-warning btn-sm">Edit</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <!-- Include Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

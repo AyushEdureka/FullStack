@@ -1,0 +1,90 @@
+<body>
+    <script>
+        //FOR OF _ USE IN ARRAY TO PRINT DATA
+
+        let fruits=["Apple","Banana","Cherry","Dragon fruit"];
+        for(let x of fruits){
+            console.log(x);
+        }
+    </script>
+</body>
+
+
+
+ <script>
+        // FOR IN LOOP USED IN OBJECT
+
+        let car={
+            brand:"Tesla",
+            model:"Model X",
+            year: 2022
+        }
+
+        for(let key in car){
+            console.log(key + "=" + car[key])
+        }
+    </script>
+
+
+
+<body>
+    <h1>DOCUMENT.WRITE HELP US TO GIVE OP ON WEBPAGE </h1>
+
+    <script>
+
+        function myfun(){
+            var str="hi guys im from document.write printing on webpage"
+            document.write(str);
+        }
+
+        myfun();
+    </script>
+
+
+
+
+<body>
+    <h1>Alert is a pop up msg</h1>
+
+    <script>
+        function Yaw(){
+            var abc="hii i am a pop up msg from alert";
+            alert(abc)
+        }
+
+        Yaw();
+    </script>
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JAVASCRIPt INPUT OUTPUT</h1>
+     
+     <button  onclick="handleInputOuput()">click Me</button>
+
+     <script>
+        function handleInputOuput(){
+            //Input from user by using  Prompt
+
+            const userName = prompt('Enter your name :')
+
+            //OUtput
+
+            alert('Hello ' + userName + '!welcome to webiste');
+
+            document.write(userName);
+
+            console.log('User name entered :' , userName);
+        }
+     </script>
+
+</body>
+</html>

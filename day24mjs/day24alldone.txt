@@ -1,0 +1,110 @@
+<script>
+        
+         name="alex";
+         console.log(name)
+        
+
+        
+        function fun(){
+         "use strict"
+         var message="hello";
+         console.log(message);
+        }
+        fun()
+
+
+<script>
+        //Construction of object
+        const person={
+            name:"piyush",
+            age:"23",
+            city:"xyz"
+        }
+        console.log(person.name)
+        console.log(person.age)
+
+        //Destructing the object
+        const{name,age,city}=person;
+        console.log(name)
+        console.log(age)
+        console.log(city)
+    </script>
+
+
+<form id="myForm" style="border: 1px solid black; margin: 10px; padding: 10px;">
+    Email:<input type="text" id="email" required><br><br>
+    <button type="submit">Submit</button>
+</form>
+
+<script>
+    document.getElementById("myForm").onsubmit= function(event){
+        var email=document.getElementById("email").value;
+    
+
+        if(!email.includes('@gmail.com')){
+          //document.write("please enter a valid email address");
+          alert("please write email in proper format")
+          event.preventDefault();  /// make sure that you can submit the form witour including @
+        }
+    }
+</script>
+
+
+
+<script>
+        var b="Prabhu";
+        console.log('this is name :'  +b)  ///prabhu
+
+        console.log(` This is name of ${b}`)  // prabhu
+    </script>
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+  <script>
+//Global scope -- living room can be accessed from anyhwere
+
+  let house="This is my whole house"
+
+  function enterBedroom(){
+    //Local scope
+
+    let bedroom="This is my bedroom"
+
+    if(true){
+        //Block code
+        let drawer="This is a drawer inside the bedroom";
+
+        console.log(house);   //global-everywhere
+        console.log(drawer);  //block inside the block
+      console.log(bedroom);   //calling inside function can be accessed
+    
+
+
+    }
+    //   console.log(house);
+    //   console.log(bedroom);
+    //  console.log(drawer);
+  }
+  enterBedroom();
+
+  //console.log(house);      //global
+  //console.log(bedroom);   //local scope cannot be accessed out side func
+  //console.log(drawer);   //block scope cannot accessed outside block
+
+    </script>
+
+
+</body>
+</html>
+
+

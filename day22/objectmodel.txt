@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //Deposit,withdrawl,accbalance basic task - method()
+
+        class bankacc{
+
+            constructor(accno,name,balance){
+                this.accno = accno;
+                this.name = name;
+                this.balance = balance
+            }
+
+            deposit(accno,amount){
+                //100 = 100+ 50 == 150
+                this.balance+=amount;  // balance + amount;
+                console.log(`Hi ${this.name} , ${amount} has been
+                deposited in your Account`)
+
+        
+            }
+
+            accbalance(){
+             console.log(`${this.name} account Balance is ${this.balance}`)
+
+            }
+
+            withdraw(accno,amount){
+             //100 - 50 = 50
+             if(this.balance>=amount){
+                this.balance-=amount;    //balance-amount
+                console.log(`Hi ${this.name} , ${amount} has been
+                withdraw from my Account`)
+             }else{
+                console.log('Sorry Insuffiecent fund')
+             }
+            }
+        }
+
+        //OBJECT
+
+        let acc1 = new bankacc(123,'XYZ',0)
+        
+
+       acc1.deposit(123,1000)
+
+       acc1.withdraw(123,450);
+       acc1.withdraw(123,1200)
+       
+
+       let acc2 = new bankacc(321,'Odek',0)
+       acc2.accbalance()
+    </script>
+</body>
+</html>
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Hello guys</p>
+    
+    <script>
+            console.log(screen.availHeight)
+            console.log(screen.availWidth)
+            console.log(screen.colorDepth)
+            console.log(screen.height)
+            console.log(screen.width)
+    </script>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //windows object model - information related to window
+        console.log(window.innerHeight)
+        console.log(window.innerWidth)
+        window.alert('hii')
+        window.prompt('enter your name')
+    </script>
+</body>
+</html>
+
+
+  <script>
+        console.log(navigator.language)
+        console.log(navigator.appName)
+        console.log(navigator.appVersion)
+    </script>
+
+
+
+  <script>
+        console.log(location.href); //Current url
+        location.href="https://mal-simon001.github.io/netflix-homepage/";   //redirect to another page
+        //location.reload();   //reload the current page
+        console.log(location.host);   // get hostname
+
+
+        ///write inside  console
+
+        console.log(history.back())
+        console.log(history.forward())
+    </script>
+
+

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<form id="myForm" style="border: 1px solid black; margin: 10px; padding: 10px;">
+    Email:<input type="text" id="email" required><br><br>
+    <button type="submit">Submit</button>
+</form>
+
+<script>
+    document.getElementById("myForm").onsubmit= function(event){
+        var email=document.getElementById("email").value;
+    
+
+        if(!email.includes('@gmail.com')){
+          //document.write("please enter a valid email address");
+          alert("please write email in proper format")
+          event.preventDefault();  /// make sure that you can submit the form witour including @
+        }
+    }
+</script>
+
+
+</body>
+</html>

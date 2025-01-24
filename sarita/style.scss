@@ -1,0 +1,10 @@
+$abc: coral;
+$text-color:white;
+
+body{
+    background-color: $abc;
+    color: $text-color;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}

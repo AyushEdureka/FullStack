@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function change(){
+            let ele=document.getElementById('don')
+            console.log(ele)
+            // ele.innerHTML='thumbs up don'
+            document.write('how is the session')
+            // alert('hii guys')
+        }
+
+// let abc=prompt('please enter your age')
+// if(abc>18){
+//     alert('you are adult')
+// }else{
+//     alert('you are minor')
+// }
+
+// if(window.confirm('are you sure ?',"ok","cancel")){
+//     alert('thank you for response')
+// }else{
+//     alert('better luck next time')
+// }
+
+// let str='hello'
+// let str1=new String('world')
+// console.log(typeof str1)
+// console.log(str.length)
+// console.log(str1)
+// console.log(str1.slice(1)) 
+// console.log(str1.substring(1))
+// str3="google is the best"
+// console.log(str3.replace('google','apple'))
+// console.log(str3.toLowerCase())
+// console.log(str3.trim())
+
+
+var arr=[1,2,3,[9,8,10,['hii', 'welcome']],99]
+console.log(arr)
+console.log(arr[4])
+
+    </script>
+</head>
+<body>
+    <h1 id="don">welcome to full stack</h1>
+    <button onclick="change()">submit me</button>
+
+
+
+
+
+
+</body>
+</html>

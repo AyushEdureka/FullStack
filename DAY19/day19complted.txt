@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>array and its operation</h1>
+
+    <script>
+        let fruits =["Apple","Mango","Grapes","Gauva","Dragon fruit"]
+        console.log(fruits.length); // length no of data - 5
+
+        console.log(fruits[0]) // Apple
+        console.log(fruits[3]) //Gauva
+
+        //add the data
+
+        fruits.push("Strawberry")   // push - it adds the data at last of array
+
+        fruits.unshift("Banana")   //unshift - it adds the data in begining of array
+        
+        //remove the data
+
+        fruits.pop();  //THE LAST ELEMENT OF THE ARRAY WILL BE REMOVED;
+
+        fruits.shift() //IT WILL REMOVE THE ELEMNT FROM FRONT;
+
+        console.log(fruits);
+    </script>
+</body>
+</html>
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>String and its Operations</h1>
+
+    <script>
+        //string - text
+        let firstname='Simon';
+
+        let lastname= 'Mal';
+
+        let fullname= firstname + " " +lastname;
+        console.log(fullname);
+
+        console.log(firstname.length);
+
+        //console.log(fullname.toUpperCase());
+
+        console.log(fullname.toLowerCase())
+
+        console.log(firstname[0]); //[index no];
+
+        let xyz="HELLO SIMON HOW ARE YOU";
+
+        console.log(xyz.replace('SIMON','EVERYONE'));
+    </script>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="myH">HELLO LEARNERS</h1>
+
+    <button onclick="myFun()">Click me to chnage</button>
+
+
+    <script>
+        function myFun(){
+            var xyz ="Welcome to Innner HTML";
+
+            //element-[tag] selector from HTML body
+            //body refers as document in js
+
+            const ele = document.getElementById("myH")
+
+            //inner HTML - change or update the conent
+
+            ele.innerHTML= xyz;
+
+
+        }
+    </script>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        if(window.confirm('Are you sure?' ,"ok","cancel")){
+         
+            document.write('Welcome Onboard')
+
+        }else{
+ 
+            document.write('Better luck next time')
+        }
+    </script>
+</body>
+</html>

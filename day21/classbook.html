@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+    //  class-keyword book-classname
+        class book{
+
+            constructor(title,author,yearblished){
+                //this - is used to get or fetch the value of your argument
+                this.title= title;
+                this.author=author;
+                this.yearblished=yearblished
+            }
+
+            //task- get the information of all the books
+            //methodname()- similar like function to perform task
+          getsumarry() {
+            return ` ${this.title} by ${this.author},published in ${this.yearblished}`  
+         
+         }
+
+        }
+
+        //OBJECT- IT USED TO use class method,can be declare outside the class
+
+        //const,var,let  variablename = new classname
+        const book1 = new book('harry potter','ABC',1987)
+
+        const book2 = new book('snow white','mamoud',1999)
+
+        const book3 = new book('it ends with us','Sushmita',2000)
+
+        const book4 = new book('Queens','Brain',2001)
+
+
+                   //objectname.methoname()
+        console.log(book1.getsumarry())
+        console.log(book2.getsumarry())
+        console.log(book3.getsumarry())
+        console.log(book4.getsumarry())
+
+    </script>
+</body>
+</html>
