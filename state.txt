@@ -1,0 +1,59 @@
+//Class componet
+import React ,{Component} from 'react';
+
+class Counter extends Component{
+
+     constructor(props){
+      super(props);
+        this.state = { count: 0}
+        //               varibalename : value
+
+     }
+
+     //function
+    
+     incrementCount = ()=>{
+         this.setState( {count:this.state.count + 1 });
+       }
+
+       render(){
+        return(
+          <div>
+            <h1>Count:{this.state.count}</h1>
+            <button onClick={this.incrementCount}>Addtocart</button>
+          </div>
+        );
+       }
+
+}
+export default Counter;
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Function Component
+
+// import React , {useState} from 'react';
+
+// function Counter(){
+//   const [count , setCount] = useState(0);
+//   // initial variable , setCount store the data which will be updated
+
+//   return(
+//     <div>
+//       <h1>Count : {count}</h1>
+//       <button onClick={ ()=>setCount(count + 1) }>Increment </button>
+//                              {/* setCount 0  + 1 = 1 */}
+//     </div>
+//   );
+// }
+// export default Counter;
