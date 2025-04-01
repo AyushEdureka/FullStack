@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // //function maintask(xyz argument ,callback-passing as argument){
+        //      console.log("ANYTHING FOR MAIN TASK");
+        //      // callback(); - it will call my function
+        //    //}
+
+        // //    maintask("value",function()-callback is also a function{
+
+        // //    })
+          
+        function greet(name,callback){
+            console.log("Hii "  +name);
+            callback();
+        }
+
+        greet("Simon",function(){
+            console.log("callback function is called")
+        })
+    </script>
+</body>
+</html>

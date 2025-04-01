@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+         let Promise2=Promise.reject("Task 2 ");
+         let Promise3=Promise.resolve("Task 3 done ");
+         let Promise4=Promise.resolve("Task 4 done ");
+         let Promise1=Promise.resolve("Task 1 done");
+
+
+        //Promise.race([]) -  anyone promise who resolve 1st or reject 1st-op
+
+        Promise.race([Promise2,Promise3,Promise4,Promise1])
+        .then(result=>{
+            console.log(result)
+        })
+        .catch(error=>{
+            console.log(error)
+        })
+    </script>
+</body>
+</html>

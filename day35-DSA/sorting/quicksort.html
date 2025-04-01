@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        //QUICK SORT:
+        //1. choose the pivot ele/data from array-- select any ele/data from -5
+        //2.partion of array into 2 part - left array(smaller)  and right array(greater)
+        //3 smaller ele < pivot =left array 
+        // greater ele/data> pivot = right side array
+
+        function quicksort(arr){
+
+            if(arr.length<=1){
+                return arr;   
+            }
+
+         const pivot = arr[arr.length-1]
+         //last data as pivot number   
+
+         const left=[]  ///left box: smaller than my pivot
+
+         const right=[] // right box: greater than my pivot
+
+         for(i=0;i<arr.length-1;i++){
+
+            if(arr[i]<pivot){
+                left.push(arr[i])
+            }else{
+                right.push(arr[i])
+            }
+         }
+
+         return quicksort(left).concat(pivot,quicksort(right))
+
+        }
+
+        const unsortedArray=[70,2,9,50,3,26,45,27,34,88,108,5]
+
+    const sortedArray = quicksort(unsortedArray)
+    console.log(sortedArray);
+    </script>
+</body>
+</html>

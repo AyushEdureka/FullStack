@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class TreeNode{
+
+            //repsrestantion of tree with class
+                   constructor(value){
+                       this.value=value;
+                       this.children = [] //[array - we will store the next nodes]
+                   }
+
+                   addChild(childNode){
+                    //push- add a children in the array
+
+                    this.children.push(childNode)
+
+            }
+        }
+
+        //object
+
+        let granparent = new TreeNode("Granparent-root element")
+
+        let parent1 = new TreeNode("parent1")
+
+
+        let parent2 = new TreeNode("parent 2")
+
+
+        let child1 = new TreeNode("Child 1")
+
+
+        let child2 = new TreeNode("Child2")
+
+        //connecting tree with the help of method
+        granparent.addChild(parent1);
+        granparent.addChild(parent2);
+
+        parent1.addChild(child1)
+        parent2.addChild(child2)
+
+        console.log(granparent);
+
+
+
+    </script>
+</body>
+</html>

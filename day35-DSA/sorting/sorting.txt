@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Sorting arranging the data
+        //1. bubble sort - use it for small amount of data
+
+        //STEPS 1: Compare the first two element
+        //Step 2: if my first element is bigger than second element then swap it
+        //step 3 : move to nexr pair
+        //step 4 : contiue till you reach the last point 
+        //step 5: start from begining again to check
+
+        function bubblesort(arr){
+
+            let n = arr.length //length =total of data
+            let swapped
+
+
+            do{
+                swapped=false;
+                 for(i=0;i<n-1;i++){     //i=0
+                  
+                    if(arr[i]>arr[i+1]){  //0 > 1;   1>2;  2>3;  4>5
+                  let temp = arr[i]
+                  arr[i]  = arr[i+1]
+                  arr[i+1]  = temp
+                  swapped=true
+                 
+                }
+
+                }
+                
+
+            }while(swapped);
+            return arr;
+        }
+
+        console.log(bubblesort([5,3,8,4,2,1,6,7,11,9]))
+
+
+    </script>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class TreeNode{
+
+            //repsrestantion of tree with class
+                   constructor(value){
+                       this.value=value;
+                       this.children = [] //[array - we will store the next nodes]
+                   }
+
+                   addChild(childNode){
+                    //push- add a children in the array
+
+                    this.children.push(childNode)
+
+            }
+        }
+
+        //object
+
+        let granparent = new TreeNode("Granparent-root element")
+
+        let parent1 = new TreeNode("parent1")
+
+
+        let parent2 = new TreeNode("parent 2")
+
+
+        let child1 = new TreeNode("Child 1")
+
+
+        let child2 = new TreeNode("Child2")
+
+        //connecting tree with the help of method
+        granparent.addChild(parent1);
+        granparent.addChild(parent2);
+
+        parent1.addChild(child1)
+        parent2.addChild(child2)
+
+        console.log(granparent);
+
+
+
+    </script>
+</body>
+</html>

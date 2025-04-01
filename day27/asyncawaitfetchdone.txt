@@ -1,0 +1,74 @@
+<script>
+
+        //fetch data from api using fetch
+
+        fetch('https://api.coindesk.com/v1/bpi/currentprice.json')
+        
+        //.then()   //resolve part-successfully able to fetch data from api
+         .then(response=>response.json())  // .json convert the data into human readble format
+        
+         //print the op or data of api
+        .then(data=>console.log(data))
+
+        .catch(error=>console.log('Error',error));  //handle any error caused by anyone
+    
+    </script>
+
+
+
+ <script>
+        async function getMovie(movieName) {
+    let url = `https://www.omdbapi.com/?t=${movieName}&apikey=a6606658`;
+    
+    try {
+      let response = await fetch(url);
+      let data = await response.json();
+      
+      if (data.Response === "True") {
+        console.log(`🎬 Title: ${data.Title}`);
+        console.log(`📅 Year: ${data.Year}`);
+        console.log(`📖 Plot: ${data.Plot}`);
+      } else {
+        console.log("Movie not found!");
+      }
+    } catch (error) {
+      console.log("Error fetching movie:", error);
+    }
+  }
+  
+  // Example usage
+  getMovie("Bridge of Spies");
+  
+    </script>
+
+
+
+<script>
+        //async function 
+
+        async function getUserData(){
+
+        //another way - safest way knows try and catch block to fetch data from api
+        // try block helps us to fetch data 
+        //catch block help us to handle any type of error
+
+        try{
+             //try to do the task
+             let response = await fetch('https://randomuser.me/api')
+
+             if(!response.ok){
+                throw new Error('network reponse was not ok :'  + response.statusText )
+
+             }
+
+             let data= await response.json();  //converted
+             console.log(data);
+        }
+        catch(error){
+                    console.log('Error ',error)
+        }
+     }
+
+     //call the fun
+     getUserData();
+    </script>

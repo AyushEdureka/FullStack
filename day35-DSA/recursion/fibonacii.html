@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Fibonacii series  declare 0 and 1
+        function fibonacii(num){
+            if(num<2){
+                return num;
+            }else{
+                return fibonacii(num-1) + fibonacii(num-2)
+            }
+        }
+
+        let n = Number(prompt("enter the limit"))
+
+        if(n<=0){
+            console.log("please enter postive integer")
+        }else if(n==1){
+            console.log(1,2)
+        }else{
+            for(let i=0;i<n;i++){
+                console.log(fibonacii(i))
+            }
+        }
+    
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+    <!-- EXAMPLE- I have to Bake/make cookies and i also have to do other task to do -->
+
+    <script>
+        //step 1: setting the time of microwave to bake the cokies
+
+        function setTimer(callback){
+            console.log("Baking cookies in oven....");
+        
+
+        //step2: Wait for 10 mins till it baked
+        
+        setTimeout(function(){
+            console.log("cookies are ready!!");
+
+            callback(); //step 3: Calling your firend with callback function
+        },10000)  //1sec-1000
+
+    }
+
+    // step 4: defining what to do in yout free time or in 10 mins
+
+    function takeOutCookies(){
+        console.log("Taking cookies out of oven")
+    }
+
+    setTimer(takeOutCookies);
+
+    console.log("Doing other thing while cookies are baking....")
+
+    </script>
+</body>
+</html>

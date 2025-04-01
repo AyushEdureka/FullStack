@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="debounce">Dedounce</button>
+
+    <script>
+        const button = document.getElementById("debounce")
+
+
+        //understand dedounce 
+        const debounce = (func,delay)=>{   //to slow down
+            
+           let debounceTimer;
+
+           return function(){
+            const context = this;
+            const args = arguments;
+            clearTimeout(debounceTimer);
+
+            debounceTimer = setTimeout(()=> func.apply(context.args),delay)
+           }
+
+        }
+
+        button.addEventListener('click' , debounce(function(){
+            alert("Hello\n No matter how many times you click the dedounce button,i will get excuted every 3 seconds")
+        },3000))
+    </script>
+</body>
+</html>

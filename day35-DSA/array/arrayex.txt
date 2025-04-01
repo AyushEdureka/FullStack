@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        //stormpetal227@gmail.com
+        // const pricess= [ 100,200,300,400,500]
+
+        // //incease the price by 10%
+        // const incresedPrice = pricess.map(price=>price *1.10)
+
+        // console.log(incresedPrice);
+
+
+
+        //reduce()
+
+        const cartPrice= [ 100,200,50,150,300]  //total amout -- 800
+
+         //reduce  the price 
+         const totalAmout = cartPrice.reduce((total,price)=>total + price,0);
+
+       console.log("Total bill: $" +totalAmout);
+
+
+    </script>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let fruits = ["orange","mamgo",12,"apple","guava"]
+        //index no array - 0
+        function forEach(array,callback){
+            for(var i=0;i<array.length;i++){
+                callback(array[i],i,array);
+            }
+        }
+
+        forEach(fruits,(item,index)=>{
+               console.log(`${index +1}.${item}`)
+        });
+    </script>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+      //n- no of disk
+      //src_rod - source rod-A, des_rod- destaination - C,aux_rod - helper - B
+     function towerofhanoi(n,src_rod,des_rod,aux_rod){
+
+          if(n==0){
+             return;
+          }
+
+       //Formalua of tower of hanoi/logic
+       towerofhanoi(n-1,src_rod,aux_rod,des_rod);
+       console.log(`Move disk ${n} from ${src_rod} --->  ${des_rod}`)   
+
+       towerofhanoi(n-1,aux_rod,des_rod,src_rod)
+
+     }
+
+     var n=3
+     towerofhanoi(n,'A','C','B');
+        </script>
+</body>
+</html>

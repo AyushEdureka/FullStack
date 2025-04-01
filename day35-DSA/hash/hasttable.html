@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        class HashTable{
+              
+             constructor(){
+                this.table = new Array(127)
+                this.size=0;  //no dat size
+             }
+
+             //HASH FUNCTION 
+             _hash(key){
+                let hash=0;
+
+                for(let i=0;i<key.length;i++){
+                    hash +=key.charCodeAt(i) //converts string into num
+                }
+
+                return hash % this.table.length;  //index no
+
+             }
+
+
+             //add data
+             set(key,value){
+                const index = this._hash(key)
+                this.table[index]=[key,value];  //(index no,apple(data))
+                this.size++   //size of array increased by one
+             }
+
+             //find
+             get(key){
+                const index =this._hash(key)
+                return this.table[index]    ///op from array[index no]
+             }
+
+             //
+
+        }
+
+
+        //SPOTIFY MUSIC APP _ WHICH HAS BILLIONS OS SONG INIT
+        //When serach any song -- song name = String 
+        //                  we convert that string with hash() function op is index no where is my song stored in array
+
+
+        const myMusicLibrary = new HashTable();
+        //Adding songs
+
+        myMusicLibrary.set('Blinding Lights','The Weeknd');
+        myMusicLibrary.set('Shape of you','Ed sheeran');
+        myMusicLibrary.set('Las Las','Burna Boy');
+        myMusicLibrary.set('red win','UB40')
+        myMusicLibrary.set('new Jeans','jiandro');
+
+        //find a song 
+        console.log(myMusicLibrary.get('Las Las'));
+
+    </script>
+    
+</body>
+</html>

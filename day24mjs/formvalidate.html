@@ -11,13 +11,13 @@
     Email:<input type="text" id="email" required><br><br>
     <button type="submit">Submit</button>
 </form>
-
+@
 <script>
     document.getElementById("myForm").onsubmit= function(event){
         var email=document.getElementById("email").value;
     
 
-        if(!email.includes('@gmail.com')){
+        if(!email.includes('@')){
           //document.write("please enter a valid email address");
           alert("please write email in proper format")
           event.preventDefault();  /// make sure that you can submit the form witour including @

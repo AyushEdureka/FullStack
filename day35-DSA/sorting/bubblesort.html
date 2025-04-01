@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Sorting arranging the data
+        //1. bubble sort - use it for small amount of data
+
+        //STEPS 1: Compare the first two element
+        //Step 2: if my first element is bigger than second element then swap it
+        //step 3 : move to nexr pair
+        //step 4 : contiue till you reach the last point 
+        //step 5: start from begining again to check
+
+        function bubblesort(arr){
+ 
+            let n = arr.length;  //no of data which we have to sort
+            let swapped;
+
+            do{   //do the task one time and then it will check the condition
+                 swapped=false
+                 for(i=0;i<n-1;i++){    //travel inside the array
+                
+                   if(arr[i]>arr[i+1]){    //if-to check the conditon
+                  
+                    let temp = arr[i];   //temp = 6  and arr[i]= null
+                    arr[i]  = arr[i+1];  //arr[i]= 2 and arr[i+1]= empty
+                    arr[i+1] = temp;     //arr[i+1] =6  and temp= null
+                    swapped=true
+
+                   } 
+
+
+                }
+
+                }  while(swapped)  //(conditon - swapping = if my 1st element is > 2nd elemnt)
+                 return arr;
+
+            }
+        console.log(bubblesort([9,2,4,7,6,16,14,3,1,10]))
+
+
+    </script>
+</body>
+</html>

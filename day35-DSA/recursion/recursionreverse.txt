@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var string= prompt("Enter your word")
+        var revstring = string.split("").reverse().join("")
+
+        if(string == revstring){
+            console.log(`${string} is plaindrome` )
+        }else{
+            console.log(`${string} is not a plaindorome`)
+        }
+    </script>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Fibonacii series  declare 0 and 1
+        function fibonacii(num){
+            if(num<2){
+                return num;
+            }else{
+                return fibonacii(num-1) + fibonacii(num-2)
+            }
+        }
+
+        let n = Number(prompt("enter the limit"))
+
+        if(n<=0){
+            console.log("please enter postive integer")
+        }else if(n==1){
+            console.log(1,2)
+        }else{
+            for(let i=0;i<n;i++){
+                console.log(fibonacii(i))
+            }
+        }
+    
+    </script>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let x=1; //this is the intial value
+
+        function recursion(x){
+            console.log(x);   //print x=1
+
+            if(x==8){
+                return ;
+            }
+            recursion(x+1);  //call the function(itself ) again with x value is increased
+
+        }
+        recursion(x); // start the function with inital value
+    </script>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //     var string="JAVASCRIPT";
+    //     var revstring = "";
+    //     //length=10
+    //     //last index- 0 to 9
+
+    //     for(i=string.length-1;i>=0;i--){
+    //         revstring+=string[i]
+    // //      revstring = revstring + string[data]
+    // //      revstring = " " + T
+    // //revstring     =   T+P
+    // //....
+    //     }
+
+    //     document.write(`Original String : ${string}`);
+
+    //     document.write(`REVERSE STRING : ${revstring}`);
+
+
+        //2nd way
+
+        var string="Aniruddha"
+        var revstring = string.split("").reverse().join("")
+
+        console.log(`og string : ${string}`)
+console.log(`reverse string : ${revstring}`)
+
+    </script>
+</body>
+</html>

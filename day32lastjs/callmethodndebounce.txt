@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="debounce">Dedounce</button>
+
+    <script>
+        const button = document.getElementById("debounce")
+
+
+        //understand dedounce 
+        const debounce = (func,delay)=>{   //to slow down
+            
+           let debounceTimer;
+
+           return function(){
+            const context = this;
+            const args = arguments;
+            clearTimeout(debounceTimer);
+
+            debounceTimer = setTimeout(()=> func.apply(context.args),delay)
+           }
+
+        }
+
+        button.addEventListener('click' , debounce(function(){
+            alert("Hello\n No matter how many times you click the dedounce button,i will get excuted every 3 seconds")
+        },3000))
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+       const person={
+        name:'Alice',
+        greet: function(greeting){
+            console.log(`${greeting}, my name is ${this.name}`)
+        }
+       }
+
+       let anotherperson = {name:'Bob'}
+
+       
+       //1. Call method- calling anothere obj[anotherperson] and use function
+       person.greet.call(anotherperson,'welcome') //passed argument without any array
+
+       //2.Apply method
+       person.greet.apply(anotherperson,['HIIIII']) //passed agrument of function in array
+
+       //3.Bind method- it will not run the function
+       //create a variable n store then call varible()
+       let abc = person.greet.bind(anotherperson,'Heyyy');
+       abc();
+
+       
+
+        </script>
+</body>
+</html>

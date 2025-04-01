@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        //Linke list  - it is connection of list of data
+        //Node(box) is divided into 2 parts- data and next[next hold addres of next box/node]-point to next data
+
+        //  class Node{
+
+        //     constructor(data){  //it help us to make blueprint of my class
+        //          this.data=data;
+        //          this.next = null;
+        //     }
+        //  }
+
+        //  //object
+        //  let node1 = new Node("box1");
+        //  let node2 = new Node("box2");
+        //  let node3 = new Node("box3");
+
+        //  node1.next=node2;  //connected wit the help of next
+        //  node2.next=node3;
+
+        //  console.log(node1.next.data);  //box2
+        //  console.log(node2.next.data);   //box3
+
+
+
+
+        //Apllocatiuon of linked list in spotify - music managment app
+        class Node{
+
+            constructor(title){
+                this.title=title;
+                this.next=null;
+            }
+        }
+
+        let song1 = new Node("memories")
+        let song2 = new Node("Red wine")
+        let song3 = new Node("Try ft odek")
+        let song4 = new Node("metamorphosis")
+
+        song1.next=song2
+        song2.next=song3
+        song3.next=song4
+
+        console.log(song1.next.title)
+        console.log(song2.next.title)
+        console.log(song3.next.title)
+        console.log(song4) 
+
+
+
+    </script>
+
+
+</body>
+</html>

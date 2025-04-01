@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        async function getMovie(movieName) {
+              
+            let url=`https://www.omdbapi.com/?t=${movieName}&apikey=a6606658`;
+
+            try{
+                
+                let response = await fetch(url);
+                let data = await response.json();
+
+                if(data.response == "True"){
+                   
+                    console.log(` 🎬Title: ${data.Title}`);
+                    console.log(` 📅 Year:  ${data.Year}`);
+                    console.log(` 📖Plot:  ${data.Plot}`);
+
+                }else{
+                    console.log("Movie not found")
+                }
+
+            }catch(error){
+                    console.log("Error fetching movie: ",error);
+            }
+        }
+
+        getMovie("Inception");
+    </script>
+</body>
+</html>

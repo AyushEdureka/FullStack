@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+         //1. COOKIE STORE SMALL TYPE DATA[username,email]- IT HAS EXPIRY
+         //set a cookie
+         //document.cookie="data to store;expiry"
+
+         document.cookie="username=Ibhrahim;expires=Wed,5 Feb 2025 00:00:00 UTC;path=/";
+
+         //get a cookie
+         let cookies = document.cookie;
+         console.log(cookies);
+
+         //delete a cookie by setting a past expiration date
+         document.cookie="username=pranb;expires=Thu 01 jan 1970 00:00:00 UTC;path=/";
+
+
+        </script>
+</body>
+</html>

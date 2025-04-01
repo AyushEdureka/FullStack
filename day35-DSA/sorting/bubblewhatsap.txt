@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Sorting arranging the data
+        //1. bubble sort - use it for small amount of data
+
+        //STEPS 1: Compare the first two element
+        //Step 2: if my first element is bigger than second element then swap it
+        //step 3 : move to nexr pair
+        //step 4 : contiue till you reach the last point 
+        //step 5: start from begining again to check
+
+        function bubblesort(arr){
+ 
+            let n = arr.length;  //no of data which we have to sort
+            let swapped;
+
+            do{   //do the task one time and then it will check the condition
+                 swapped=false
+                 for(i=0;i<n-1;i++){    //travel inside the array
+                
+                   if(arr[i]>arr[i+1]){    //if-to check the conditon
+                  
+                    let temp = arr[i];   //temp = 6  and arr[i]= null
+                    arr[i]  = arr[i+1];  //arr[i]= 2 and arr[i+1]= empty
+                    arr[i+1] = temp;     //arr[i+1] =6  and temp= null
+                    swapped=true
+
+                   } 
+
+
+                }
+
+                }  while(swapped)  //(conditon - swapping = if my 1st element is > 2nd elemnt)
+                 return arr;
+
+            }
+        console.log(bubblesort([9,2,4,7,6,16,14,3,1,10]))
+
+
+    </script>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        //Whatsapp contact sort
+
+        function sortContact(contacts){
+            return contacts.sort((a,b)=>a.name.localeCompare(b.name));
+        }
+
+        let contacts =[
+            {name:"Odek",lastMessage:"HII"},
+            {name:"Prabhu",lastMessage:"How are you"},
+            {name:"Anirudha",lastMessage:"Hello need one on one session"},
+            {name:"Rich",lastMessage:"wassup free?"},
+            {name:"Aahh",lastMessage:"wassup?"},
+        ]
+        console.log(sortContact(contacts))
+    </script>
+
+
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        //SELECTION SORT 
+        //SELECTION _ TO SELECT SOMEHTING
+
+        //10,2,4,6   ---    2 = 2,10,4,6 \\ 4- ,2,4,10,6 // 6 = 2,4,6,10
+        //      6    selected
+        //  2  4-left[smaller]  - 6 - 10[greatrer]
+        //STEP1: find the samllest element or data
+        //STEP2: swap it with first element 
+        //STEP3 : find the next smallest ele
+        //step4 : swap it with second ele
+        //step 5: repaet unitil it is sorted
+
+
+        function selectionSort(arr){
+            let n = arr.length
+
+            for(let i=0;i<n-1;i++){
+ 
+                let minIndex=i; //i=0 stating minIndex
+                for( let j=i+1;j<n;j++){
+
+                    if(arr[j]<arr[minIndex]){
+                        minIndex = j
+
+                    }
+                }
+                if(minIndex!=i){
+                    let temp = arr[i]
+                    arr[i]=arr[minIndex]
+                    arr[minIndex]=temp
+                }
+
+
+            }
+            return arr;
+        }
+        console.log(selectionSort([7,8,2,5,9,4]))
+    </script>
+</body>
+</html>

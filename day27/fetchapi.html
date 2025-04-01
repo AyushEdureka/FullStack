@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        //async function is used to fetch any data from api
+        //await - it used to as waiting period to fetch data from api
+        //fetch - it is used to get data frpm api
+
+        async function fetchdata(){
+
+            const data = await fetch('https://api.coindesk.com/v1/bpi/currentprice.json')
+
+            console.log(2+2);  //it is acting like other work
+
+            
+           
+            //rule to fetch data frpm json
+            const json = await data.json();
+            console.log(json)
+
+        }
+        fetchdata(); //calling function
+
+
+    </script>
+</body>
+</html>

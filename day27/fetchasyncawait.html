@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //async function 
+
+        async function getUserData(){
+
+        //another way - safest way knows try and catch block to fetch data from api
+        // try block helps us to fetch data 
+        //catch block help us to handle any type of error
+
+        try{
+             //try to do the task
+             let response = await fetch('https://randomuser.me/api')
+
+             if(!response.ok){
+                throw new Error('network reponse was not ok :'  + response.statusText )
+
+             }
+
+             let data= await response.json();  //converted
+             console.log(data);
+        }
+        catch(error){
+                    console.log('Error ',error)
+        }
+     }
+
+     //call the fun
+     getUserData();
+    </script>
+</body>
+</html>

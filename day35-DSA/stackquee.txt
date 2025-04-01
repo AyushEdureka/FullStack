@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+//         class Stack{
+//     constructor(){
+//         this.item=[]
+//     }
+
+//     //add an item to stack
+//     push(element){
+//         this.item.push(element)
+//     }
+
+//     //remove an item 
+//     pop(){
+//         if(this.isEmpty()) return "UNDERFLOW";
+//         return this.item.pop()
+//     }
+// //look at top element
+// peek(){
+// if(this.isEmpty()) return" no element in the stack"
+// return this.item[this.item.length-1];
+// }
+
+
+
+// //to check weather stack is empty
+//     isEmpty(){
+//         return this.item.length==0;
+//     }
+// size(){
+//     return this.item.length;
+// }
+
+// }
+
+// let browserHistory=new Stack();
+// browserHistory.push("amazon")
+// browserHistory.push("netflix")
+// browserHistory.push("flipkart")
+// //console.log(browserHistory)
+// console.log(browserHistory.pop());
+// //console.log(browserHistory.peek())
+// //console.log(browserHistory.pop());
+// console.log(browserHistory.isEmpty())
+
+
+// //QUEUE
+// class Queue{
+//     constructor(){
+//         this.item=[]
+//     }
+// //add element in queue
+//     enqueue(element){
+//         this.item.push(element)
+//     }
+
+
+//     //remove an item from queue
+//     dequeue(){
+//         if(this.isEmpty()) return "underflow"
+//         return this.item.shift();
+//     }
+
+//     //show the front item
+//     front(){
+//         if(this.isEmpty()) return "no element in queue"
+//         return this.item[0]
+//     }
+// //check queue is empty 
+// isEmpty(){
+//     return this.item.length==0
+// }
+// //size og queue
+// size(){
+//     return this.item.length
+// }
+
+// }
+
+
+// let customerSupport=new Queue();
+// customerSupport.enqueue("customer 1")  
+// customerSupport.enqueue("customer 2")
+// customerSupport.enqueue("customer 3")
+// console.log(customerSupport.dequeue());
+// console.log(customerSupport.dequeue())
+// console.log(customerSupport.dequeue())
+// console.log(customerSupport.dequeue())
+// console.log(customerSupport.isEmpty());
+    
+
+
+//MAP-KEY VALUE PAIR (LEFT IS KEY(NAME:) AND RIGHT IS VALUE(BOB))
+const fruits=new Map()
+fruits.set("mango",20)
+fruits.set("guava",40)
+fruits.set("kiwi",60)
+fruits.set("orange",80)
+
+console.log(`value of kiwi is ${fruits.get("kiwi")}`)
+
+console.log("keys of fruits are:")
+console.log(fruits.keys());
+
+console.log("values are fruits are:")
+console.log(fruits.values())
+
+console.log(`fruit has aaples ${fruits.has("apples")}`)
+console.log(fruits.entries())
+
+console.log(`deleting guava from fruits ${fruits.delete("guava")}`)
+console.log(fruits.entries())
+
+console.log(`removing all fruits ${fruits.clear()}`)
+console.log(fruits)
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+///2nd
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stack and Queue Examples</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    .output {
+      margin-top: 20px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      background-color: #f9f9f9;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- <h1>Stack Example (Web Browser History)</h1>
+  <button onclick="runStackExample()">Run Stack Example</button>
+  <div id="stackOutput" class="output"></div> -->
+
+  <h1>Queue Example (Customer Support)</h1>
+  <button onclick="runQueueExample()">Run Queue Example</button>
+  <div id="queueOutput" class="output"></div>
+
+  <script>
+    // class Stack {
+    //   constructor() {
+    //     this.items = [];
+    //   }
+
+    //   push(element) {
+    //     this.items.push(element);
+    //   }
+
+    //   pop() {
+    //     if (this.isEmpty()) return "Underflow";
+    //     return this.items.pop();
+    //   }
+
+    //   peek() {
+    //     if (this.isEmpty()) return "No elements in Stack";
+    //     return this.items[this.items.length - 1];
+    //   }
+
+    //   isEmpty() {
+    //     return this.items.length == 0;
+    //   }
+
+    //   size() {
+    //     return this.items.length;
+    //   }
+    // } -->
+
+    class Queue {
+      constructor() {
+        this.items = [];
+      }
+
+      enqueue(element) {
+        this.items.push(element);
+      }
+
+      dequeue() {
+        if (this.isEmpty()) return "Underflow";
+        return this.items.shift();
+      }
+
+      front() {
+        if (this.isEmpty()) return "No elements in Queue";
+        return this.items[0];
+      }
+
+      isEmpty() {
+        return this.items.length == 0;
+      }
+
+      size() {
+        return this.items.length;
+      }
+    }
+
+    // function runStackExample() {
+    //   let stackOutput = document.getElementById('stackOutput');
+    //   let browserHistory = new Stack();
+    //   browserHistory.push("Page 1");
+    //   browserHistory.push("Page 2");
+    //   browserHistory.push("Page 3");
+    //   let popResult = browserHistory.pop(); // "Page 3"
+    //   let peekResult = browserHistory.peek(); // "Page 2"
+    //   let isEmptyResult = browserHistory.isEmpty(); // false
+
+    //   stackOutput.innerHTML = `
+    //     <p>Pushed: Page 1, Page 2, Page 3</p>
+    //     <p>Popped: ${popResult}</p>
+    //     <p>Peeked: ${peekResult}</p>
+    //     <p>Is Empty: ${isEmptyResult}</p>
+    //   `;
+    // }
+
+    function runQueueExample() {
+      let queueOutput = document.getElementById('queueOutput');
+      let customerSupport = new Queue();
+      customerSupport.enqueue("Customer 1");
+      customerSupport.enqueue("Customer 2");
+      customerSupport.enqueue("Customer 3");
+      let dequeueResult = customerSupport.dequeue(); // "Customer 1"
+      let frontResult = customerSupport.front(); // "Customer 2"
+      let isEmptyResult = customerSupport.isEmpty(); // false
+
+      queueOutput.innerHTML = `
+        <p>Enqueued: Customer 1, Customer 2, Customer 3</p>
+        <p>Dequeued: ${dequeueResult}</p>
+        <p>Front: ${frontResult}</p>
+        <p>Is Empty: ${isEmptyResult}</p>
+      `;
+    }
+  </script>
+
+</body>
+</html>

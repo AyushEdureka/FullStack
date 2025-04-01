@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+     class TreeNode{  //blueprint of my Tree- Node
+
+        constructor(data){
+             
+            this.data=data;
+            this.children=[] //empty array
+        }
+
+        addChild(childNode){
+          this.children.push(childNode)
+        }
+
+     }
+
+     let root = new TreeNode('Batch4');
+     let subfolder1 = new TreeNode('day35-Dsa')
+     let subfolder2 = new TreeNode('Extra')
+     let subfile3 = new TreeNode('tree.html')
+
+     root.addChild(subfolder1);
+     root.addChild(subfolder2);
+
+     subfolder1.addChild(subfile3);
+
+     console.log(root);
+
+
+
+    </script>
+</body>
+</html>

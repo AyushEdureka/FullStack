@@ -1,0 +1,94 @@
+<script>
+     fetch('https://api.coindesk.com/v1/bpi/currentprice.json')
+       .then(response=>response.json()) // this will convert data into readable n writeable format
+       .then(data=>console.log(data))  //print output
+       .catch(error=>console.log('Error',error)); //handle any error
+
+
+
+
+//2nd
+
+
+   <script>
+   async function getUserData() {
+    
+    try{
+        let response = await fetch('https://randomuser.me/api/');
+         
+        if(!response.ok){ 
+            throw new Error('netwokr response was not ok : ' +response.statusText)
+        }
+
+        let data = await response.json();
+        console.log(data);
+
+
+    }
+    catch(error){
+          console.log('Error',error);  
+    }
+
+   }
+ 
+
+getUserData();
+
+
+//can resolve promises too
+
+
+  <h1>syntax of async- it returns promise</h1>
+    <script>
+    //syntax
+
+    async function f() {
+        console.log("async function output")
+        return Promise.resolve(1);
+    }
+
+    f();
+
+
+
+<h1>example-ordering food online</h1>
+    <p>Maintask - is to order food and eat when it arrives</p>
+    <p>Other small- do homework,do your office,watch tv anytask you can in the meantime</p>
+
+    <script>
+//async - main task (to order food and it will taks some time to finish task)
+//await - (this will check if food is arrived,you pause your other small task when your food is arrived and start to eat)
+
+//syntax-for main task
+// async  function orderFood(){   
+// //this function will return promise
+// return "food is ready!";
+//   }
+
+
+
+
+
+//code
+
+async function orderFood() {
+
+    let food = await prepareFood();
+    console.log(food);  //
+
+    
+}
+console.log("watching tv,doing homewoke,doing other task")
+
+
+function prepareFood(){
+    return new Promise(resolve=>{
+        setTimeout(()=>{
+            resolve("Food is ready!");
+        },5000);
+    })
+ 
+}
+
+orderFood()  //call the async function
+    </script>

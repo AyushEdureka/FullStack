@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Function to simlulate loading
+
+        function loadMovie(movieName){
+            return new Promise((resolve)=>{
+                console.log(`Loading  ${movieName}.....`);
+
+                setTimeout(()=>{
+                    resolve(`${movieName} is ready to watch!`)
+                },10000);
+            });
+        }
+
+
+        //async function to watch a movie
+         async function watchMovie(){
+            console.log("Getting ready to watch...")
+
+            //wait for movie to load
+            let moviemessage = await loadMovie("Avengers : Endgame");
+
+            console.log(moviemessage)
+
+            console.log("enjoy your movie")
+        }
+
+        //call the fucntion to start
+        watchMovie();
+
+        console.log("Meanline when movie is loading or stuck  i will checkout reviews or any website")
+    </script>
+</body>
+</html>

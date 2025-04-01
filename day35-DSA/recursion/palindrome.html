@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var string= prompt("Enter your word")
+        var revstring = string.split("").reverse().join("")
+
+        if(string == revstring){
+            console.log(`${string} is plaindrome` )
+        }else{
+            console.log(`${string} is not a plaindorome`)
+        }
+    </script>
+</body>
+</html>

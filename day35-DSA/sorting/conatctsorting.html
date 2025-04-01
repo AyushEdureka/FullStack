@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        //Whatsapp contact sort
+
+        function sortContact(contacts){
+            return contacts.sort((a,b)=>a.name.localeCompare(b.name));
+        }
+
+        let contacts =[
+            {name:"Odek",lastMessage:"HII"},
+            {name:"Prabhu",lastMessage:"How are you"},
+            {name:"Anirudha",lastMessage:"Hello need one on one session"},
+            {name:"Rich",lastMessage:"wassup free?"},
+            {name:"Aahh",lastMessage:"wassup?"},
+        ]
+        console.log(sortContact(contacts))
+    </script>
+
+
+</body>
+</html>

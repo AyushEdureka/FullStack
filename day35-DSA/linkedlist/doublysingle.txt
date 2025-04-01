@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Node{   //blueprint of node(box)
+
+            constructor(value){
+                this.value = value;
+                this.next = null;
+            }
+
+        }
+
+        class singlyLinkedList{
+
+            constructor(){
+                this.head=null;   //1st song
+                this.tail=null;   //last song
+                this.length=0;    //no of songs in playlist
+            }
+
+             //Mthod to add node to create the list 
+             append(value){
+                const newNode = new Node(value);  //create a new node(box)
+  
+                if(!this.head){    //list is empty
+                 this.head = newNode
+                 this.tail = newNode;
+                }else{   //if there are alredy some nodes(box)
+                     this.tail.next= newNode
+                     this.tail=newNode
+
+                }
+                this.length++;
+
+            }
+        }
+
+
+        const list = new singlyLinkedList()
+        //console.log(list)
+        list.append("song1")
+        list.append("song2")
+        list.append("song3")
+
+        console.log(list)
+    </script>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+ class Node{   //blueprint of node(box)
+
+   constructor(value){
+    this.value = value;
+    this.next = null;
+    this.prev =null;
+}
+
+}
+
+class DoublyLinkedList{
+
+constructor(){
+    this.head=null;   // first node in the list
+    this.tail=null;   // last node in this list
+    this.length=0;    // no  of nodes
+}
+
+ //Mthod to add node to create the list  - it adds the node at the last
+ append(value){
+    const newNode = new Node(value);  //create a new node(box)
+
+    if(!this.head){    //list is empty
+     this.head = newNode
+     this.tail = newNode;
+    }else{   //if there are alredy some nodes(box)
+         this.tail.next= newNode
+         newNode.prev = this.tail
+         this.tail=newNode
+
+    }
+    this.length++;
+
+}
+
+//ADD a node at the start of the list
+
+prepend(value){
+    const newNode = new Node(value);
+
+    if(!this.head){
+        this.head = newNode
+        this.tail = newNode
+    }else{
+        newNode.next =this.head
+        this.head.prev = newNode
+        this.head = newNode
+    }
+
+this.length++;
+}
+
+
+
+
+printForwad(){
+    let current = this.head;
+    let values = [];  //array 
+    while(current){
+        values.push(current.value)
+        current = current.next;
+    }
+    console.log("Forwad :", values.join("-->"));  
+}
+
+printBackward(){
+    let current = this.tail;
+    let values = [];  //array 
+    while(current){
+        values.push(current.value)
+        current = current.prev;
+    }
+    console.log("Backward :", values.join("<---"));  
+}
+
+
+}
+
+
+
+const list = new DoublyLinkedList();
+list.append(1)
+list.append(2)
+list.append(3)
+list.append(4)
+list.prepend(0)
+list.prepend(-1)
+
+list.printForwad()
+list.printBackward()
+
+    </script>
+</body>
+</html>

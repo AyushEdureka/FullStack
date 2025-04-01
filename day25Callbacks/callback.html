@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>welcome to callback function </h1>
+
+    <script>
+
+      //main task
+      function doHomework(subject,callback){
+        //passing callback as an argument/paramter
+    
+        console.log(`Doing a homework for ${subject}...`)
+        callback(); ///calling a callback function
+
+      }
+
+      doHomework("Full-stack",function(){
+        console.log("Homwork is finished");
+        //A callback is function that gets passed into another function as argument
+        //Example- its like calling a friend and telling them to call you back once you have
+        //complted yout task
+      })
+
+
+        </script>
+</body>
+</html>

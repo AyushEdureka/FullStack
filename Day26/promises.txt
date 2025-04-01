@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function wait(ms){
+            return new Promise(resolve=>setTimeout(resolve,ms))
+        }
+
+        wait(1000)
+
+        //.then() help us to give output when your promise is resloved
+        .then(()=>{
+            console.log("Step 1")
+            return wait(1000);
+        })
+
+        .then(()=>{
+            console.log("step 2")
+            return wait(1000);
+        })
+
+        .then(()=>{
+            console.log("step 3")
+
+        });
+
+
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // PLACE A ORDER FOR PIZZA 
+        // PROMISE RESOLVE("pizza delievered")  REJECT("ORDer cancelled")
+
+        function orderPizza(){
+            return new Promise((resolve,reject)=>{
+                let pizzaReddy = true;
+
+             setTimeout(()=>{    
+               if(pizzaReddy){
+                resolve("pizza is delivered")
+               }
+               else{
+                reject("Order Canclled")
+               }
+            },8000)
+
+            });
+        }
+
+
+        //OUTPUT FOR PROMISE
+        orderPizza()
+        
+        // .then() gives op for resolve part
+        .then(message=>{
+            console.log(message)
+        })
+
+ 
+        //.catch() gives op for rejected part
+        .catch(error=>{
+            console.log(error)
+        });
+
+        console.log("Waiting for pizza  while doing other things");
+
+     </script>
+</body>
+</html>
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function wait(ms){
+            return new Promise(resolve=>setTimeout(resolve,ms))
+        }
+
+        wait(1000)
+
+        //.then() help us to give output when your promise is resloved
+        .then(()=>{
+            console.log("Step 1")
+            return wait(1000);
+        })
+
+        .then(()=>{
+            console.log("step 2")
+            return wait(1000);
+        })
+
+        .then(()=>{
+            console.log("step 3")
+
+        });
+
+
+    </script>
+</body>
+</html>

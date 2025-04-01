@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Node{   //blueprint of node(box)
+
+            constructor(value){
+                this.value = value;
+                this.next = null;
+            }
+
+        }
+
+        class singlyLinkedList{
+
+            constructor(){
+                this.head=null;   //1st song
+                this.tail=null;   //last song
+                this.length=0;    //no of songs in playlist
+            }
+
+             //Mthod to add node to create the list 
+             append(value){
+                const newNode = new Node(value);  //create a new node(box)
+  
+                if(!this.head){    //list is empty
+                 this.head = newNode
+                 this.tail = newNode;
+                }else{   //if there are alredy some nodes(box)
+                     this.tail.next= newNode
+                     this.tail=newNode
+
+                }
+                this.length++;
+
+            }
+        }
+
+
+        const list = new singlyLinkedList()
+        //console.log(list)
+        list.append("song1")
+        list.append("song2")
+        list.append("song3")
+
+        console.log(list)
+    </script>
+</body>
+</html>

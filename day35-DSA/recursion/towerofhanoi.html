@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+      //n- no of disk
+      //src_rod - source rod-A, des_rod- destaination - C,aux_rod - helper - B
+     function towerofhanoi(n,src_rod,des_rod,aux_rod){
+
+          if(n==0){
+             return;
+          }
+
+       //Formalua of tower of hanoi/logic
+       towerofhanoi(n-1,src_rod,aux_rod,des_rod);
+       console.log(`Move disk ${n} from ${src_rod} --->  ${des_rod}`)   
+
+       towerofhanoi(n-1,aux_rod,des_rod,src_rod)
+
+     }
+
+     var n=3
+     towerofhanoi(n,'A','C','B');
+        </script>
+</body>
+</html>

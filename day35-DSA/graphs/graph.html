@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Socail netwokr - facebook
+        //Each person - Node
+
+
+        class Graph{
+            constructor(){
+                this.adjacenyList = {}; //we will store our 
+            }
+
+            //add a node(person)
+            addNode(node){
+                if(!this.adjacenyList[node]){
+                    this.adjacenyList[node] = [];  //we dont have any person
+                }
+            }
+
+            addEdge(node1,node2){
+                this.adjacenyList[node1].push(node2);
+                this.adjacenyList[node2].push(node1);
+            }
+
+            removeEdge(node1,node2){
+                this.adjacenyList[node1]=this.adjacenyList[node1].filter(friend=> friend!==node2)
+                this.adjacenyList[node2]=this.adjacenyList[node2].filter(friend=> friend!==node1)
+
+            }
+
+            removeNode(node){
+                while(this.adjacenyList[node].length){
+                    const adjacentNode= this.adjacenyList[node].pop()
+                    this.removeEdge(node,adjacentNode)
+
+                }
+                    delete this.adjacenyList[node];
+            }
+
+
+        }
+
+
+        //example 
+        const socialNetwork = new Graph();
+
+
+        socialNetwork.addNode("Mamoud")
+        socialNetwork.addNode("paranb")
+        socialNetwork.addNode("brain")
+
+        socialNetwork.addEdge("Mamoud","paranb")
+        socialNetwork.addEdge("Mamoud","brain")
+        socialNetwork.addEdge("paranb","brain")
+
+        //console.log(socialNetwork.adjacenyList)
+
+        //socialNetwork.removeEdge("Mamoud","brain")
+
+        //console.log(socialNetwork.adjacenyList)
+
+        socialNetwork.removeNode("paranb")
+        console.log(socialNetwork.adjacenyList)
+
+
+    </script>
+</body>
+</html>

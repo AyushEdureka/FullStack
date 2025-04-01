@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //finalyy method always give the op
+
+        let myPromse = new Promise((resolve,reject)=>{
+            setTimeout(()=>reject("failed"),2000);
+        })
+        myPromse
+
+        .then(result=>{
+            console.log(result)
+        })
+        .catch(error=>{
+            console.log(error)
+        })
+
+        .finally(()=>{
+            console.log("Task Completed !")
+        })
+    </script>
+</body>
+</html>

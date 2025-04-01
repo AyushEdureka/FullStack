@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Queue{
+
+            constructor(){
+                this.item=[];  //initale queue is my empty queue
+            }
+
+           
+            //add the data
+            enqueue(element){
+                this.item.push(element);
+            }
+
+            //dequeue-rewmove the data from queue
+            dequeue(){
+                if(this.isEmpty())  return "UnderFlow"
+                return  this.item.shift();
+            }
+
+            isEmpty(){   //queue(array) is empty or not
+              return this.item.length === 0;       
+                 }
+
+
+            size(){
+                return this.item.length;
+            }     
+
+            front(){
+                if(this.isEmpty()) return " No element in quque"
+                return this.item[0]
+            }
+        }
+
+        //object
+        let customerSuppot = new Queue();
+        customerSuppot.enqueue("customer 1 ticket ")
+        customerSuppot.enqueue("customer 2 ticket ")
+        customerSuppot.enqueue("customer 3 ticket ")
+        customerSuppot.enqueue("customer 4 ticket ")
+
+        console.log(customerSuppot)
+        
+
+        console.log(customerSuppot.dequeue())
+        console.log(customerSuppot.dequeue())
+        console.log(customerSuppot.dequeue())
+        console.log(customerSuppot.dequeue())
+        console.log(customerSuppot.dequeue())
+        console.log(customerSuppot.front())
+
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+    //STACK- LIFO
+    //1.push - add data
+    //2.Pop - remove the data from top
+
+    //3-peek to look for the data which is at the top
+
+     class Stack{
+               constructor(){
+                this.data=[]  //[] is it empty array
+             }
+  
+        //add the data
+        push(element){
+            this.data.push(element)
+        }
+
+        //remove the data
+        pop(){
+            if(this.isEmpty()) return "UnderFlow";   //UnderFlow- stack is empty cannot remove the data
+            return this.data.pop();
+        }
+
+        isEmpty(){
+            return this.data.length == 0;   //[]-aaray empty
+        }
+
+        peek(){
+            if(this.isEmpty()) return"no Element/data  in Stack";
+            return this.data[this.data.length - 1];
+        }
+
+
+        size(){
+            return this.data.length;  
+        }
+    }
+
+    let browserHistory = new Stack();
+
+    browserHistory.push("pag1-amazon");
+    browserHistory.push("pag2-youtube")
+    browserHistory.push("page3-nteflix")
+
+    console.log(browserHistory)
+    //console.log(browserHistory.peek()) // find or look the data which is the top
+    console.log(browserHistory.pop())
+    console.log(browserHistory.pop())
+    console.log(browserHistory.pop())
+
+    console.log(browserHistory.size())
+    console.log(browserHistory.pop())
+
+
+
+
+        </script>
+</body>
+</html>

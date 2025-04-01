@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Queue{
+
+            constructor(){
+                this.item=[];  //initale queue is my empty queue
+            }
+
+           
+            //add the data
+            enqueue(element){
+                this.item.push(element);
+            }
+
+            //dequeue-rewmove the data from queue
+            dequeue(){
+                if(this.isEmpty())  return "UnderFlow"
+                return  this.item.shift();
+            }
+
+            isEmpty(){   //queue(array) is empty or not
+              return this.item.length === 0;       
+                 }
+
+
+            size(){
+                return this.item.length;
+            }     
+
+            front(){
+                if(this.isEmpty()) return " No element in quque"
+                return this.item[0]
+            }
+        }
+
+        //object
+        let customerSuppot = new Queue();
+        customerSuppot.enqueue("customer 1 ticket ")
+        customerSuppot.enqueue("customer 2 ticket ")
+        customerSuppot.enqueue("customer 3 ticket ")
+        customerSuppot.enqueue("customer 4 ticket ")
+
+        console.log(customerSuppot)
+        
+
+        console.log(customerSuppot.dequeue())
+        console.log(customerSuppot.dequeue())
+        console.log(customerSuppot.dequeue())
+        console.log(customerSuppot.dequeue())
+        console.log(customerSuppot.dequeue())
+        console.log(customerSuppot.front())
+
+    </script>
+</body>
+</html>

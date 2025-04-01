@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let fruits = ["orange","mamgo",12,"apple","guava"]
+        //index no array - 0
+        function forEach(array,callback){
+            for(var i=0;i<array.length;i++){
+                callback(array[i],i,array);
+            }
+        }
+
+        forEach(fruits,(item,index)=>{
+               console.log(`${index +1}.${item}`)
+        });
+    </script>
+</body>
+</html>

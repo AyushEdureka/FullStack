@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Aynchronous - Mutilple task at same time</h1>
+
+    <button onclick="startTask()" >Place order[start task]</button>
+
+    <script>
+        function startTask(){
+            console.log("Step1 : start boling water(this will task 3 seconds/min)");
+
+            // syntax-- setTimeout(function(){  help us to set a timer
+            //                   },time in seconds);  1000=1s
+
+            setTimeout(()=>{
+                console.log("step 2: Water is ready")
+            },10000);
+
+            console.log("while waiting for water to boil , i will chop veggies(task2)")
+        }
+
+
+    </script>
+</body>
+</html>
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Synchronuse-step  by step</h1>
+
+    <script>
+        //task to do make sandwich
+        console.log("Step 1: get a bread");
+        console.log("Step 2: Apply butter");
+        console.log("Step 3: Do stuffing");
+        console.log("Step 4: Cover with another bread");
+    </script>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        "use strict";
+    
+        // function h1(x,x){
+        //     console.log("this is error for duplicate parameter");
+        //     var x=10
+        //     console.log(x)
+        // }
+        // h1(10,10)
+
+        // var a = 076;
+        // console.log(a);   
+
+
+        const sum=(a=5,b=2)=>a+b;   //arrow function
+
+        //document.write("sum using default parameter :" + sum());
+        //document.write("sum using default parameter :" + sum(7,10));
+        document.write("sum using default parameter :" + sum(7));
+
+    </script>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        "use strict";
+
+        var abc="hii guys"
+
+        function myfun(){
+            var message="im a under strict mode";
+            console.log(message)
+        }
+        myfun()
+    </script>
+</body>
+</html>

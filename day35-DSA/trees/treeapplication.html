@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  
+    <style>
+        body{
+            background-color: #f8f9fa;
+            font-family: Arial, Helvetica, sans-serif;
+
+        }
+
+        .container{
+            max-width: 600px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .tree-menu{
+            list-style: none;
+            padding: 0;
+        }
+
+        .tree-menu li{
+            margin: 10px 0;
+            cursor: pointer;
+        }
+
+        .menu-item{
+            font-size: 18px;
+            font-weight: bold;
+            padding: 10px;
+            display: block;
+            background: #007bff;
+            color: white;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .menu-item:hover{
+            background: #0056b3;
+        }
+
+        .submenu{
+            list-style: none;
+            padding: 20px;
+            display: none;
+        }
+
+        .submenu .menu-item{
+            font-size: 16px;
+            background: #28a745;
+        }
+    </style>
+  
+
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="text-center">Website Navigation(Tree structure)</h2>
+        <div id="menu-container"></div>
+    </div>
+
+    <script>
+        //Define the Tree Structure
+        const navigationTree = {
+            "Electonices":{
+                "Mobiles":{},   //<li>Mobiles</li>
+                "Laptops":{},   //<li>Laptops<li>
+                "Cameras":{}    //li
+            },
+            "Clothing":{
+                "Men":{},     //li
+                "Women":{}    //li
+            },
+
+            "Home & Kitchen":{
+                "Furniure":{},
+                "Appliances":{}
+            }
+
+        };
+
+        //Function to create menu items 
+        function createMenu(tree){
+            const ul = document.createElement("ul");
+            ul.classList.add("tree-menu")
+
+            for(let key in tree){
+                const li = document.createElement("li")
+                const span = document.createElement("span");
+           
+                span.textContent = key;
+                span.classList.add("menu-item")
+
+                li.appendChild(span);   //4 data - 4 li tag
+
+
+                if(Object.keys(tree[key]).length > 0){
+
+                    const subMenu = createMenu(tree[key]);
+                    subMenu.classList.add("submenu")
+                    li.appendChild(subMenu)
+
+                    //Toggl submenu on click
+                    span.addEventListener("click",function(){
+                        subMenu.style.display = subMenu.style.display === "block" ? "none" : "block";
+                    });
+
+                }
+                
+                ul.appendChild(li)
+
+            }
+            return ul;
+
+        }
+
+        //APPEND
+        document.addEventListener("DOMContentLoaded",function (){
+            const menuConatiner = document.getElementById("menu-container");
+            menuConatiner.appendChild(createMenu(navigationTree))
+        });
+    </script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

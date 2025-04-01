@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function selectseort(arr){
+            let n = arr.length;  //total no of data
+
+            for(let i=0;i<n-1;i++){
+                let minIndex=i;  //minIndex=0
+
+                for(j=i+1;j<n;j++){
+
+                    if(arr[j]<arr[minIndex]){
+                     //arr[1]<arr[0]; --> 2<10;-- true
+                     minIndex=j   //mindex=data-2
+                    }
+                }
+                if(minIndex!=i){
+                    let temp=arr[i]
+                    arr[i]=arr[minIndex]
+                    arr[minIndex]=temp
+
+                }
+
+            }
+            return arr;
+        }
+        console.log(selectseort([7,9,2,8,0,12]))
+    </script>
+</body>
+</html>

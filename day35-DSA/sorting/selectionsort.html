@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        //SELECTION SORT 
+        //SELECTION _ TO SELECT SOMEHTING
+
+        //10,2,4,6   ---    2 = 2,10,4,6 \\ 4- ,2,4,10,6 // 6 = 2,4,6,10
+        //      6    selected
+        //  2  4-left[smaller]  - 6 - 10[greatrer]
+        //STEP1: find the samllest element or data
+        //STEP2: swap it with first element 
+        //STEP3 : find the next smallest ele
+        //step4 : swap it with second ele
+        //step 5: repaet unitil it is sorted
+
+        richmwendwa03@gmail.com
+        function selectionSort(arr){
+            let n = arr.length
+
+            for(let i=0;i<n-1;i++){
+ 
+                let minIndex=i; //i=0 stating minIndex
+                for( let j=i+1;j<n;j++){
+
+                    if(arr[j]<arr[minIndex]){
+                        minIndex = j
+
+                    }
+                }
+                if(minIndex!=i){
+                    let temp = arr[i]
+                    arr[i]=arr[minIndex]
+                    arr[minIndex]=temp
+                }
+
+
+            }
+            return arr;
+        }
+        console.log(selectionSort([7,8,2,5,9,4]))
+    </script>
+</body>
+</html>

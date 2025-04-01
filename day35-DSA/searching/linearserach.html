@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //SEQUEMTIAL SEARCH _ LINEAR SEARCH- go to each ele/data of the array and
+        //find your target
+
+        function sequential(arr,target){
+
+            for(let i=0;i<arr.length;i++){
+
+                if(arr[i] === target){
+               //if(arr[data]=== target)    
+                        return i;
+                    }
+                }
+                return 'coundnot find the target' //it will return me -1 if my data is not found
+            }
+
+            let books=["math","science","dusk till dawn","english","history"]
+            let targetBook="xyz";
+
+            let index = sequential(books,targetBook);
+            console.log(index)
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hash Table Example</title>
+</head>
+<body>
+    <h1>Hash Table Example</h1>
+    <div id="output"></div>
+
+    <script>
+        class HashTable {
+            constructor() {
+                this.table = new Array(127);
+                this.size = 0;
+            }
+
+            _hash(key) {
+                let hash = 0;
+                for (let i = 0; i < key.length; i++) {
+                    hash += key.charCodeAt(i);
+                }
+                return hash % this.table.length;
+            }
+
+            set(key, value) {
+                const index = this._hash(key);
+                this.table[index] = [key, value];
+                this.size++;
+            }
+
+            get(key) {
+                const index = this._hash(key);
+                return this.table[index];
+            }
+
+            remove(key) {
+                const index = this._hash(key);
+                if (this.table[index] && this.table[index][0] === key) {
+                    this.table[index] = undefined;
+                    this.size--;
+                }
+            }
+        }
+
+        // Creating the hash table
+        const myMusicLibrary = new HashTable();
+
+        // Adding songs to the library
+        myMusicLibrary.set('Blinding Lights', 'The Weeknd');
+        myMusicLibrary.set('Shape of You', 'Ed Sheeran');
+        myMusicLibrary.set('Levitating', 'Dua Lipa');
+
+        // Finding a song in the library
+        const shapeOfYou = myMusicLibrary.get('Shape of You');
+
+        // Removing a song from the library
+        myMusicLibrary.remove('Blinding Lights');
+        const blindingLights = myMusicLibrary.get('Blinding Lights');
+
+        // Displaying the output in the HTML
+        document.getElementById('output').innerHTML = `
+            <p>Shape of You: ${shapeOfYou}</p>
+            <p>Blinding Lights (after removal): ${blindingLights}</p>
+        `;
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //HASH TABLES:
+
+        class HashTable{
+            constructor(){
+                this.table=new Array(127);
+                this.size=0;
+            }
+
+            //Hash function to find the shelf  
+            _hash(key){
+                let hash=0;
+                for(let i=0;i<key.length;i++){
+                hash+=key.charCodeAt(i);
+            }
+            return hash % this.table.length;       
+        }
+
+        //ADD book to library
+        set(key,value){
+            const index=this._hash(key)
+            this.table[index]=[key,value]
+            this.size++
+        }
+
+
+        //find a book in the library
+        get(key){
+            const index=this._hash(key)
+            return this.table[index]
+        }
+
+        //remove a book  from the library
+        remove(key){
+            const index=this._hash(key)
+            if(this.table[index] && this.table[index][0]==key){
+                this.table[index]=undefined
+                this.size--
+            }
+        }
+    }
+
+    const myMusicLibrary=new HashTable();
+//ADDING SONG
+myMusicLibrary.set('blinding lights','the weekend') 
+myMusicLibrary.set('gods plan','drake')              
+myMusicLibrary.set('senorita','charles')             
+myMusicLibrary.set('one love','rishabh')              
+
+
+//finding/searching a song
+//console.log((myMusicLibrary))
+
+console.log(myMusicLibrary.get('senorita'))
+console.log(myMusicLibrary.get('gods plan'))
+console.log(myMusicLibrary.get('calm down'))
+console.log(myMusicLibrary.get('not like us'))
+
+myMusicLibrary.remove('blinding lights');
+
+console.log((myMusicLibrary))
+console.log(myMusicLibrary.get('blinding lights'))
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

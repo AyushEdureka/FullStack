@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function wait(ms){
+            return new Promise(resolve=>setTimeout(resolve,ms))
+        }
+
+        wait(1000)
+
+        //.then() help us to give output when your promise is resloved
+        .then(()=>{
+            console.log("Step 1")
+            return wait(1000);
+        })
+
+        .then(()=>{
+            console.log("step 2")
+            return wait(1000);
+        })
+
+        .then(()=>{
+            console.log("step 3")
+
+        });
+
+
+    </script>
+</body>
+</html>

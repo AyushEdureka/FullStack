@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // //STCAK -- LIFO[LAST IN FIRST OUT]
+
+        // let plate=[]   //empty array
+
+        // //Add data in stack
+        // //push() -- add or insert
+
+        // plate.push("plate 1")
+        // plate.push("plate 2")
+        // plate.push("plate 3")
+        // plate.push("plate 4")
+        // plate.push("plate 5")
+
+        // //Pop() method - remove data from stack
+        // //concept LIFO
+        // console.log(plate.pop())
+        // console.log(plate.pop())
+        // console.log(plate.pop())
+
+
+        //REAL TIME EXAMPLE - browser history
+        let browserhistory=[]
+
+        browserhistory.push("instagram")
+        browserhistory.push("youtube")
+        browserhistory.push("edureka")  //last website visted
+
+        
+
+        console.log(browserhistory.pop())
+
+        console.log(browserhistory)
+    </script>
+</body>
+</html>
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        //QUEUE FIRST IN FIRST OUT
+
+        // let counterline = []
+        // counterline.push("akshita")
+        // counterline.push("simon")
+        // counterline.push("prabhu")
+        // counterline.push("brain")  
+
+
+        // //Remove data from queye
+        // //methodname - shift
+
+        //  console.log(counterline.shift())
+        //  console.log(counterline.shift())
+
+        //  console.log(counterline)
+
+
+        //QUEUE CUSTOMER SUPPORT SYSTEM
+        // FIRST COME FIRST SERVE..
+
+        // 5 ppl raised
+        // 1,2,3,4,5 ticket -- 
+        
+        let supportQueue = []
+
+        supportQueue.push("ticket 1 came from simon")
+        supportQueue.push("ticket 2 came from parbhu")
+        supportQueue.push("ticket 3 came from brain")
+        supportQueue.push("ticket 4 came from sushmita")
+
+        console.log(supportQueue.shift())
+        console.log(supportQueue.shift())
+
+        console.log(supportQueue)
+
+
+
+
+    </script>
+</body>
+</html>

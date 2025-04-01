@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>welcome to callback function </h1>
+
+    <script>
+
+      //main task
+      function doHomework(subject,callback){
+        //passing callback as an argument/paramter
+    
+        console.log(`Doing a homework for ${subject}...`)
+        callback(); ///calling a callback function
+
+      }
+
+      doHomework("Full-stack",function(){
+        console.log("Homwork is finished");
+        //A callback is function that gets passed into another function as argument
+        //Example- its like calling a friend and telling them to call you back once you have
+        //complted yout task
+      })
+
+
+        </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //function maintask(xyz argument ,callback-passing as argument){
+             console.log("ANYTHING FOR MAIN TASK");
+             // callback(); - it will call my function
+           //}
+
+        //    maintask("value",function()-callback is also a function{
+
+        //    })
+          
+        function greet(name,callback){
+            console.log("Hii "  +name);
+            callback();
+        }
+
+        greet("Simon",function(){
+            console.log("callback function is called")
+        })
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function do_sum(num1,num2,callback){
+            var sum=0;
+            sum=num1+num2;
+
+            //callback () function called
+            callback(sum);
+        }
+
+        do_sum(10,20,function(result){
+            document.write(result);
+        })
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+    <!-- EXAMPLE- I have to Bake/make cookies and i also have to do other task to do -->
+
+    <script>
+        //step 1: setting the time of microwave to bake the cokies
+
+        function setTimer(callback){
+            console.log("Baking cookies in oven....");
+        
+
+        //step2: Wait for 10 mins till it baked
+        
+        setTimeout(function(){
+            console.log("cookies are ready!!");
+
+            callback(); //step 3: Calling your firend with callback function
+        },10000)  //1sec-1000
+
+    }
+
+    // step 4: defining what to do in yout free time or in 10 mins
+
+    function takeOutCookies(){
+        console.log("Taking cookies out of oven")
+    }
+
+    setTimer(takeOutCookies);
+
+    console.log("Doing other thing while cookies are baking....")
+
+    </script>
+</body>
+</html>

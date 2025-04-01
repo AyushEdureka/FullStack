@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let order1 = new Promise((resolve,reject)=>{
+            setTimeout(resolve,3000,"Pizza from SHOP1 -dominos")
+        })
+
+        let order2 = new Promise((resolve,reject)=>{
+            setTimeout(reject,5000,"Pizza from SHOP2 -Bik Oven")
+        })
+
+        let order3 = new Promise((resolve,reject)=>{
+            setTimeout(reject,1500,"Pizza from SHOP3 -Pizza hut")
+        })
+
+
+        //method1 promiseall
+        // Promise.all([order1,order2,order3])
+
+        // .then((pizza)=>{
+        //     console.log("ALL PIZZA ARRIVED")
+        // })
+
+        // .catch((error)=>{
+        //   console.log("One Pizza failed")
+        // })
+
+
+        //method- promise.allsetted- you will get the rrsult of every promise
+
+        Promise.allSettled([order1,order2,order3])
+
+         .then((pizza)=>{
+         console.log("ALL PIZZA ORDER FINISHED")
+         })
+
+          
+    </script>
+</body>
+</html>
