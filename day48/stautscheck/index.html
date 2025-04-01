@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<style>
+    body{
+        background-color: #f4f4f4;
+        text-align: center;
+        padding: 50px;
+    }
+
+    .container{
+        max-width: 500px;
+        background:white;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px gray;
+    }
+    .result{
+        font-size: 1.2em;
+        margin-top: 20px;
+        padding:10px;
+        border-radius: 5px;
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+     <h2 class="mb-4">HTTP STATUS CODE</h2>
+
+     <input type="number" id="statusCodeInput" class="form-control mb-3" placeholder="enter a status code" />
+     <!-- 404-file not found
+     //200- sucessfully -->
+     <button class="btn btn-primary" onclick="checkStatusCode()">check</button>
+     <div id="result" class="result"></div>
+    </div>
+    <script>
+        function checkStatusCode(){
+            let code = document.getElementById("statusCodeInput").value;
+            fetch(`http://localhost:3000/status/${code}`)
+            .then(respnose => respnose.json())
+            .then(data=>{
+                let resultDiv = document.getElementById("result");
+                if(data.message){
+                  resultDiv.innerHTML = `<strong>${code}:</strong> ${data.message}`;
+                  resultDiv.style.backgroundColor =data.color;
+                }else{
+                    resultDiv.innerHTML="Invalid status code! Try again.";
+                    resultDiv.style.backgroundColor = "lightgray";
+
+                }
+
+            });
+
+        }
+        </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Login Form</h1>
+    <form id="loginForm">
+        Name:<input type="text" id="name" required><br><br>
+        Email:<input type="email" id="email" required><br><br>
+
+        <button type="submit">Submit</button>
+
+    </form>
+
+
+    <p id="reponseMessage"></p>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit',function(event){
+            event.preventDefault();
+
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+
+            fetch('http://localhost:5000/login',{
+                method:'POST',
+                headers:{
+                    'Content-Type':'application/json'
+                },
+                body: JSON.stringify({name,email})
+            })
+
+            .then(response=> response.json())
+            .then(data=>{
+                document.getElementById('reponseMessage').textContent = data.message;
+            })
+
+            .catch(error=> console.error('Error',error))
+
+        });
+    </script>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+const express = require('express')
+const cors = require('cors')
+
+const app = express();
+const PORT=5000;
+
+//use cors as middleware
+app.use(cors());  //cors allow us to share the resource from different web domian
+
+//parse json
+app.use(express.json());
+
+//
+app.post('/login',(req,res)=>{
+    const {name,email} = req.body
+
+    //simple validation
+    if(name && email){
+         res.json({message:`Welcome to Amazon ${name}`});
+
+    }else{
+          res.status(400).json({message:'Name and email are requied'});
+    }
+});
+
+app.listen(PORT,()=>{
+    console.log(`Server is running on http://localhost:${PORT}`);
+})

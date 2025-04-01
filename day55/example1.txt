@@ -1,0 +1,31 @@
+const express = require('express');
+const mongoose = require('mongoose');
+
+const app = express();
+app.use(express.json());
+
+//Connect to MongoDB local instance
+mongoose.connect("mongodb://127.0.0.1:27017/fullstack",{   //fullstak- database name
+})
+
+.then(()=>console.log("✅ Connect to MongoDb"))
+.catch(err=>console.log("❌ Mongodb Connection Error :",err))
+
+//Define schema - BluePrint of data stored in DATABASE
+const StudentSchema = new mongoose.Schema(
+    {
+         
+    name:String,
+    age:Number,
+    grade:String,
+    subjects:[String],
+
+    });
+
+    //Create A Model:
+    // get,post,put,delete - http methods
+    //get - get the information -- mongodb find()
+
+    //put- update the data in backend -- mongoDB - update()
+
+    //delete - delete from backenb   -- mongoDB- delete()

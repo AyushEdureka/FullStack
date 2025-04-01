@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="circle" style="width: 50px; height: 50px; border-radius: 50%; background-color: red; position: absolute;">
+
+    </div>
+
+    <script>
+        const circle = document.getElementById("circle") 
+
+        //for mouse down(start dargging - touchsart)
+
+        circle.addEventListener("mousedown",function(event){
+             
+            console.log("mouse down!! touch the circle ")
+            document.addEventListener("mousemove",OnMouseMove)
+        })
+
+        //function to perform task of moving for mousemove event
+         function OnMouseMove(event){
+            circle.style.left  =  event.pageX-25 + "px"
+            circle.style.top  =  event.pageY-25 +  "px"
+            console.log("mouse moving-circle moving");
+         }
+
+         //for mouse up (stop dragging ---  touchend)
+         document.addEventListener("mouseup",function(){
+            console.log("mouse up it stop dragging stop touching screen")
+            document.removeEventListener("mousemove",OnMouseMove)
+            //it will remove the event f mouse move and free your cursor
+        });
+    </script>
+</body>
+</html>

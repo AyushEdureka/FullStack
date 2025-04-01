@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: lightblue;
+        }
+
+        form{
+            border: 1px solid black;
+            border-radius: 2px;
+            background: blue;
+            text-align: center;
+            color: white;
+            margin: 10px;
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Login Form</h1>
+    <form id="loginForm">
+     Name:<input type="text" id="name" placeholder="Enter your name " required><br><br>
+     Email:<input type="email" id="email" placeholder="Enter your email" required><br><br>
+     <button type="submit">Submit</button>
+    </form>
+
+    <p id="responseMessage"></p>
+
+    <script>
+       document.getElementById('loginForm').addEventListener('submit', function(event){
+
+        event.preventDefault();  // it help us to submit the form without reloading your current wpage
+
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+
+        fetch('http://localhost:3300/login',{
+                  
+             method:'POST',
+             headers:{
+                'Content-Type':'application/json'
+            },
+            body:JSON.stringify({name,email})
+        })
+
+        .then(response=>response.json())
+        .then(data=>{document.getElementById('responseMessage').textContent = data.message
+
+        })
+
+        .catch(error => console.error('Error ',error))
+
+       });
+    </script>
+</body>
+</html>

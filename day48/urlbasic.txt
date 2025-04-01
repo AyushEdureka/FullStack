@@ -1,0 +1,35 @@
+const url = require('url')
+const myURL = url.parse('https://www.amazon.com/gp/help/customer/display.html?nodeId=508510&ref_=nav_cs_customerservice')
+console.log(myURL);
+console.log(myURL.hostname);
+console.log(myURL.query)
+
+
+
+const express = require('express');
+const app = express();  //Created the Express application
+
+app.get('/',(req,res)=>{
+    res.send('Hello Guys');
+});
+
+//Make The server listen
+app.listen(3001,()=>{
+    console.log('Server is running on http://localhost:3001')
+});
+
+
+
+
+//http- module
+const http = require('http');
+
+//Create a server that will reposnd with any of the request
+const server = http.createServer((req,res)=>{
+    res.writeHead(200,{'content-type' : 'text/plain'});
+    res.end('How are you?')
+});
+
+server.listen(4001,()=>{
+    console.log('Server is ruuning on http://localhost:4001');
+});
